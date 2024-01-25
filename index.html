@@ -12,13 +12,13 @@
     <!--Css Link-->
     <link rel="stylesheet" href="styles.css" />
 
-    <title>Document</title>
+    <title>SoFineSkin</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <!--Menu/Search Bar(s)-->
-        <div>
+        <div class="">
           <button
             class="navbar-toggler"
             type="button"
@@ -52,7 +52,7 @@
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div class="offcanvas-header">
-            <div>
+            <div class="d-flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -85,26 +85,108 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+          <!-- Menu -->
+          <div class="offcanvas-body justify-content-center flex-grow-1 pe-3">
+            <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link mx-lg-2 active" aria-current="page" href="#"
-                  >Home</a
+                  >Brands</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Link</a>
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Browse by
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Link</a>
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
               </li>
             </ul>
+            <div class="enquiries-div">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+              >
+                <path
+                  d="M16.96 10.6004C16.96 11.7249 16.5133 12.8033 15.7181 13.5985C14.923 14.3936 13.8445 14.8404 12.72 14.8404C11.5955 14.8404 10.517 14.3936 9.72185 13.5985C8.92669 12.8033 8.47998 11.7249 8.47998 10.6004C8.47998 9.47583 8.92669 8.39737 9.72185 7.60222C10.517 6.80706 11.5955 6.36035 12.72 6.36035C13.8445 6.36035 14.923 6.80706 15.7181 7.60222C16.5133 8.39737 16.96 9.47583 16.96 10.6004Z"
+                  fill="black"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.2876 23.3116C6.63413 23.0848 2.12012 18.4293 2.12012 12.7201C2.12012 6.86574 6.86574 2.12012 12.7201 2.12012C18.5745 2.12012 23.3201 6.86574 23.3201 12.7201C23.3201 18.5745 18.5745 23.3201 12.7201 23.3201C12.6717 23.3204 12.6233 23.3204 12.5749 23.3201C12.479 23.3201 12.383 23.3169 12.2876 23.3116ZM5.9181 19.4087C5.83884 19.1811 5.81187 18.9386 5.83917 18.6991C5.86647 18.4597 5.94736 18.2295 6.07581 18.0256C6.20427 17.8216 6.377 17.6493 6.58119 17.5213C6.78538 17.3932 7.01578 17.3129 7.25529 17.2861C11.3872 16.8287 14.0785 16.87 18.1902 17.2956C18.4301 17.3206 18.661 17.4 18.8656 17.5277C19.0701 17.6554 19.2427 17.8281 19.3704 18.0327C19.4981 18.2372 19.5774 18.4682 19.6023 18.7081C19.6272 18.9479 19.5971 19.1902 19.5142 19.4167C21.2764 17.6337 22.2633 15.227 22.2601 12.7201C22.2601 7.45139 17.9888 3.18012 12.7201 3.18012C7.45139 3.18012 3.18012 7.45139 3.18012 12.7201C3.18012 15.3256 4.22475 17.6873 5.9181 19.4087Z"
+                  fill="black"
+                />
+              </svg>
+              Login/Sign Up
+
+              <div>
+                <p>Contact Us</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                >
+                  <path
+                    d="M3.29599 7.33836C4.6071 9.91505 6.71945 12.0183 9.29615 13.3385L11.2992 11.3354C11.5451 11.0896 11.9093 11.0076 12.2279 11.1169C13.2477 11.4538 14.3494 11.6359 15.4784 11.6359C15.9792 11.6359 16.3889 12.0456 16.3889 12.5464V15.724C16.3889 16.2248 15.9792 16.6345 15.4784 16.6345C6.92886 16.6345 0 9.70564 0 1.1561C0 0.655328 0.409722 0.245605 0.910494 0.245605H4.09722C4.598 0.245605 5.00772 0.655328 5.00772 1.1561C5.00772 2.29422 5.18982 3.38681 5.5267 4.40656C5.62685 4.72524 5.55401 5.08033 5.29908 5.33527L3.29599 7.33836Z"
+                    fill="black"
+                  />
+                </svg>
+                <p>Call / Whatsapp: +234 906 522 2544</p>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="15"
+                  viewBox="0 0 20 15"
+                  fill="none"
+                >
+                  <path
+                    d="M17.34 0.395508H2.1675C1.59264 0.395508 1.04133 0.623869 0.634846 1.03035C0.228361 1.43684 0 1.98815 0 2.56301V12.3168C0 12.8916 0.228361 13.4429 0.634846 13.8494C1.04133 14.2559 1.59264 14.4843 2.1675 14.4843H17.34C17.9148 14.4843 18.4662 14.2559 18.8726 13.8494C19.2791 13.4429 19.5075 12.8916 19.5075 12.3168V2.56301C19.5075 1.98815 19.2791 1.43684 18.8726 1.03035C18.4662 0.623869 17.9148 0.395508 17.34 0.395508ZM6.84496 8.32422L8.58113 9.84147C8.91167 10.1297 9.33 10.2728 9.75375 10.2728C10.1775 10.2728 10.5958 10.1287 10.9264 9.84147L12.6625 8.32422L12.6224 8.36432L16.5738 12.3157H2.93371L6.88506 8.36432L6.84496 8.32422ZM2.1675 11.5505V4.23198L6.07117 7.64687L2.1675 11.5505ZM13.4363 7.64687L17.34 4.23198V11.5473L13.4363 7.64687ZM17.34 2.56301V2.79059L10.2133 9.02649C10.0827 9.13059 9.92071 9.18729 9.75375 9.18729C9.58678 9.18729 9.42477 9.13059 9.29424 9.02649L2.1675 2.79059V2.56301H17.34Z"
+                    fill="black"
+                  />
+                </svg>
+                <p>Email: example@gmail.com</p>
+              </div>
+            </div>
+            <!-- Form  -->
+            <form class="main-form">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
           </div>
         </div>
 

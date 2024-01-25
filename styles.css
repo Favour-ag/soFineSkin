@@ -32,9 +32,15 @@
 svg {
   cursor: pointer;
 }
+.main-form {
+  display: flex;
+}
 /* MEDIA QUERY */
 @media (max-width: 576px) {
   .account-span {
+    display: none;
+  }
+  .main-form {
     display: none;
   }
 }
@@ -44,6 +50,12 @@ svg {
     margin-inline: 4rem;
   }
   .search-icon {
+    display: none;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .enquiries-div {
     display: none;
   }
 }
