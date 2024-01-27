@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+.navbar-toggler:focus .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #000;
+}
+.search-icon {
+  cursor: pointer;
+}
+.logo {
+  cursor: pointer;
+}
+svg {
+  cursor: pointer;
+}
+.main-form {
+  display: flex;
+}
+.p-span {
+  color: #00339b;
+}
+
+.nav-link {
+  font-size: 16px;
+  padding: 0.1rem;
+}
+.home-icon {
+  display: flex;
+  gap: 14px;
+}
+.enquiries-div {
+  font-size: 16px;
+  margin-top: 3rem;
+  /* padding: 0; */
+}
+.contact-info {
+  margin-top: 0.5rem;
+}
+
+.contact-info p {
+  font-weight: bold;
+}
+.call-div {
+  margin-top: -0.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#email-span {
+  margin-top: 0.3rem;
+}
+
+.right-icons {
+  display: flex;
+  align-content: center;
+  justify-items: center;
+  padding: 1rem;
+  gap: 12px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-p {
+  padding-right: 1rem;
+  padding-left: 1.5rem;
+  font-size: 2.3rem;
+}
+
+.ellipse-div {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.ellipse-div > div {
+  display: grid;
+  /* flex-direction: column; */
+}
+
+.face {
+  margin-left: 10px;
+}
+.Bath {
+  margin-left: -5px;
+}
+.asian {
+  margin-left: -14px;
+}
+
+.recommend-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 20px;
+}
+
+.product-div-item {
+  background-color: red;
+  padding: 2rem;
+}
+.product-div-item img {
+  width: 95.101px;
+  height: 54.26px;
+}
+.product-div-item .like {
+  position: relative;
+  top: -1.2rem;
+  left: 16px;
+}
+.product-div-item-list .rating {
+  margin-left: 3px;
+}
+.product-div-item-list .product-title {
+  color: #000;
+  font-family: Lora;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* MEDIA QUERY */
+@media (max-width: 576px) {
+  .account-span {
+    display: none;
+  }
+  .main-form {
+    display: none;
+  }
+  .Tab-Nav {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    margin-inline: 4rem;
+  }
+  .search-icon {
+    display: none;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .enquiries-div {
+    display: none;
+  }
+  .Tab-Nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .product-div-item img {
+    width: 175.409px;
+    height: 100.08px;
+  }
+}
