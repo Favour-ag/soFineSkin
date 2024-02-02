@@ -41,9 +41,13 @@
 svg {
   cursor: pointer;
 }
-.main-form {
+.nav-form {
   display: flex;
 }
+.nav-form input {
+  width: 420px;
+}
+
 .p-span {
   color: #00339b;
 }
@@ -95,10 +99,10 @@ main {
   overflow-x: hidden;
   margin-top: 6rem;
 }
-.main-p {
+.main-paragraph {
   padding-right: 1rem;
   padding-left: 1.5rem;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
 }
 
 .ellipse-div {
@@ -110,6 +114,7 @@ main {
   width: 100%;
   margin-left: 3rem;
   margin-right: 3rem;
+  margin-bottom: 16px;
 }
 
 .ellipse-div > div {
@@ -127,13 +132,29 @@ main {
   margin-left: -14px;
 }
 
-.recommend-div {
+.line {
+  border: 2px solid black;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 2rem;
+  margin-top: -1px;
+}
+
+.filter {
+  background-color: blue;
+}
+
+/* .recommend-div {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
   gap: 20px;
-}
+} */
 
 .product-div-item {
   /* background-color: red; */
@@ -233,7 +254,7 @@ footer {
   .account-span {
     display: none;
   }
-  .main-form {
+  .nav-form {
     display: none;
   }
   .Tab-Nav {
@@ -242,9 +263,15 @@ footer {
   footer img {
     margin-right: 1rem;
   }
-  .inner-nav-div {
+  .inner-nav-outline-div {
     background-color: #fff;
     width: 100%;
+  }
+  .contact-us-footer {
+    display: none;
+  }
+  .socials-right {
+    display: none;
   }
 }
 
@@ -261,18 +288,28 @@ footer {
   .enquiries-div {
     display: none;
   }
-  .inner-nav-div {
+  .inner-nav-outline-div {
     background-color: #fff;
     width: 90%;
     border: 1px solid black;
+    border-top: 0;
     padding-left: 14px;
     padding-right: 14px;
+    top: 0;
+  }
+  .nav-form {
+    display: flex;
   }
   .Tab-Nav {
     display: flex;
     justify-content: space-between;
     list-style: none;
   }
+  .line {
+    text-align: center;
+    width: 26%;
+  }
+
   .product-div-item img {
     width: 175.409px;
     height: 100.08px;
@@ -281,6 +318,16 @@ footer {
     position: relative;
     left: 11.5rem;
     top: -6rem;
+  }
+  .ellipse-div {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
   .product-div-item .rating {
     margin-left: 55px;
@@ -300,6 +347,17 @@ footer {
     /* background-color: red; */
   }
   footer img {
-    margin-left: 4rem;
+    margin-left: -6rem;
+  }
+  .footer-div-items-center {
+    display: grid;
+    place-items: start;
+    line-height: 10px;
+    width: 100%;
+    height: 100%;
+    /* background-color: pink; */
+  }
+  .socials-center {
+    display: none;
   }
 }

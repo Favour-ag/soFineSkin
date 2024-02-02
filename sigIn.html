@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Boostrap CSS CDN Link-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!--Css Link-->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Sign In</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        gap: 0.5rem;
+      }
+      form {
+        margin: 10px;
+        font-family: Lora;
+      }
+      form .btn {
+        background: #908cb8;
+        width: 340px;
+        border-radius: 8px;
+      }
+      form .btn:hover {
+        border: 1px solid #908cb8;
+      }
+      img {
+        width: 149.52px;
+        height: 131.72px;
+        margin-top: 20px;
+      }
+      .sigIn-div {
+        text-align: center;
+      }
+      .sigIn-div p:nth-child(1) {
+        font-family: Garamond;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .sigIn-div p:nth-child(2) {
+        font-family: Lora;
+        font-size: 20px;
+        font-weight: 400;
+        text-wrap: wrap;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./images/logo.png" alt="" />
+    <form>
+      <div class="sigIn-div">
+        <p>Sign In</p>
+        <p>Hello! sign in to have access to your favourites, cart and more</p>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Jennifer04@gmail.com"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+        <h6 class="text-end">Forgot your password?</h6>
+      </div>
+      <button type="button" class="btn">Sign In</button>
+      <h6 class="text-center">Dont have an account?</h6>
+      <h6 class="text-center"><a href="signUp.html">Create One</a></h6>
+    </form>
+    <!--Boostrap JS CDN Link-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
