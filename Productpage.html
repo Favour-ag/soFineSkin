@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Boostrap CSS CDN Link-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!--Css Link-->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>SoFineSkin</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar-div {
+        z-index: 10;
+      }
+      .productImage-div img:nth-child(1) {
+        /* background-color: blue; */
+        width: 93%;
+        height: 170px;
+      }
+      .productImage-div img:nth-child(2) {
+        /* background-color: red; */
+        position: absolute;
+        top: 5rem;
+        left: 3.5rem;
+      }
+      .productImage-div img:nth-child(3) {
+        /* background-color: yellow; */
+        position: absolute;
+        top: -1.5rem;
+        left: -2.5rem;
+      }
+      .productLike {
+        position: absolute;
+        right: 1.3rem;
+      }
+      .btn:nth-child(2) {
+        background-color: #908cb8;
+        margin-bottom: 1.5rem;
+      }
+      .btn:nth-child(1) {
+        outline: 1px solid #908cb8;
+      }
+      .p-description-text{
+        text-align: justify;
+        padding: 1rem;
+        margin-top: -1.8rem;
+        font-family: Lora;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar-div">
+      <div class="inner-nav-outline-div">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <!--Menu/Search Bar(s)-->
+            <div class="nav-menu">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <svg
+                class="search-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+              >
+                <path
+                  d="M15.75 13.86H14.7546L14.4018 13.5198C15.6793 12.0381 16.3814 10.1464 16.38 8.19C16.38 6.57017 15.8997 4.98672 14.9997 3.63988C14.0998 2.29305 12.8207 1.24331 11.3242 0.62343C9.82765 0.0035486 8.18092 -0.158641 6.59221 0.157372C5.00351 0.473385 3.54419 1.25341 2.3988 2.3988C1.25341 3.54419 0.473385 5.00351 0.157372 6.59221C-0.158641 8.18092 0.0035486 9.82765 0.62343 11.3242C1.24331 12.8207 2.29305 14.0998 3.63988 14.9997C4.98672 15.8997 6.57017 16.38 8.19 16.38C10.2186 16.38 12.0834 15.6366 13.5198 14.4018L13.86 14.7546V15.75L20.16 22.0374L22.0374 20.16L15.75 13.86ZM8.19 13.86C5.0526 13.86 2.52 11.3274 2.52 8.19C2.52 5.0526 5.0526 2.52 8.19 2.52C11.3274 2.52 13.86 5.0526 13.86 8.19C13.86 11.3274 11.3274 13.86 8.19 13.86Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+            <!--Logo-->
+            <img src="./images/logo.png" alt="" class="logo" />
+            <div
+              class="offcanvas offcanvas-start w-75 h-50"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <div class="home-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="21"
+                    viewBox="0 0 22 21"
+                    fill="none"
+                  >
+                    <path
+                      d="M21.5447 10.216L11.5489 0.227488C11.4769 0.155375 11.3914 0.0981632 11.2973 0.0591279C11.2032 0.0200927 11.1023 0 11.0005 0C10.8986 0 10.7977 0.0200927 10.7036 0.0591279C10.6095 0.0981632 10.524 0.155375 10.452 0.227488L0.456229 10.216C0.165019 10.5072 0 10.9028 0 11.3153C0 12.1719 0.696477 12.8684 1.55312 12.8684H2.60633V19.9958C2.60633 20.4253 2.95335 20.7723 3.38289 20.7723H9.44734V15.3364H12.1653V20.7723H18.618C19.0476 20.7723 19.3946 20.4253 19.3946 19.9958V12.8684H20.4478C20.8603 12.8684 21.2559 12.7058 21.5471 12.4122C22.1514 11.8055 22.1514 10.8227 21.5447 10.216Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                  >
+                    <path
+                      d="M15.75 13.86H14.7546L14.4018 13.5198C15.6793 12.0381 16.3814 10.1464 16.38 8.19C16.38 6.57017 15.8997 4.98672 14.9997 3.63988C14.0998 2.29305 12.8207 1.24331 11.3242 0.62343C9.82765 0.0035486 8.18092 -0.158641 6.59221 0.157372C5.00351 0.473385 3.54419 1.25341 2.3988 2.3988C1.25341 3.54419 0.473385 5.00351 0.157372 6.59221C-0.158641 8.18092 0.0035486 9.82765 0.62343 11.3242C1.24331 12.8207 2.29305 14.0998 3.63988 14.9997C4.98672 15.8997 6.57017 16.38 8.19 16.38C10.2186 16.38 12.0834 15.6366 13.5198 14.4018L13.86 14.7546V15.75L20.16 22.0374L22.0374 20.16L15.75 13.86ZM8.19 13.86C5.0526 13.86 2.52 11.3274 2.52 8.19C2.52 5.0526 5.0526 2.52 8.19 2.52C11.3274 2.52 13.86 5.0526 13.86 8.19C13.86 11.3274 11.3274 13.86 8.19 13.86Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- Menu -->
+              <div
+                class="offcanvas-body justify-content-center flex-grow-1 pe-3"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link mx-lg-2 active"
+                      aria-current="page"
+                      href="#"
+                      >Brands</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Browse by
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Categories
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="enquiries-div">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                  >
+                    <path
+                      d="M16.96 10.6004C16.96 11.7249 16.5133 12.8033 15.7181 13.5985C14.923 14.3936 13.8445 14.8404 12.72 14.8404C11.5955 14.8404 10.517 14.3936 9.72185 13.5985C8.92669 12.8033 8.47998 11.7249 8.47998 10.6004C8.47998 9.47583 8.92669 8.39737 9.72185 7.60222C10.517 6.80706 11.5955 6.36035 12.72 6.36035C13.8445 6.36035 14.923 6.80706 15.7181 7.60222C16.5133 8.39737 16.96 9.47583 16.96 10.6004Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.2876 23.3116C6.63413 23.0848 2.12012 18.4293 2.12012 12.7201C2.12012 6.86574 6.86574 2.12012 12.7201 2.12012C18.5745 2.12012 23.3201 6.86574 23.3201 12.7201C23.3201 18.5745 18.5745 23.3201 12.7201 23.3201C12.6717 23.3204 12.6233 23.3204 12.5749 23.3201C12.479 23.3201 12.383 23.3169 12.2876 23.3116ZM5.9181 19.4087C5.83884 19.1811 5.81187 18.9386 5.83917 18.6991C5.86647 18.4597 5.94736 18.2295 6.07581 18.0256C6.20427 17.8216 6.377 17.6493 6.58119 17.5213C6.78538 17.3932 7.01578 17.3129 7.25529 17.2861C11.3872 16.8287 14.0785 16.87 18.1902 17.2956C18.4301 17.3206 18.661 17.4 18.8656 17.5277C19.0701 17.6554 19.2427 17.8281 19.3704 18.0327C19.4981 18.2372 19.5774 18.4682 19.6023 18.7081C19.6272 18.9479 19.5971 19.1902 19.5142 19.4167C21.2764 17.6337 22.2633 15.227 22.2601 12.7201C22.2601 7.45139 17.9888 3.18012 12.7201 3.18012C7.45139 3.18012 3.18012 7.45139 3.18012 12.7201C3.18012 15.3256 4.22475 17.6873 5.9181 19.4087Z"
+                      fill="black"
+                    />
+                  </svg>
+                  Login/Sign Up
+                  <div class="contact-info">
+                    <p>Contact Us</p>
+                    <div class="call-div">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="17"
+                        viewBox="0 0 17 17"
+                        fill="none"
+                      >
+                        <path
+                          d="M3.29599 7.33836C4.6071 9.91505 6.71945 12.0183 9.29615 13.3385L11.2992 11.3354C11.5451 11.0896 11.9093 11.0076 12.2279 11.1169C13.2477 11.4538 14.3494 11.6359 15.4784 11.6359C15.9792 11.6359 16.3889 12.0456 16.3889 12.5464V15.724C16.3889 16.2248 15.9792 16.6345 15.4784 16.6345C6.92886 16.6345 0 9.70564 0 1.1561C0 0.655328 0.409722 0.245605 0.910494 0.245605H4.09722C4.598 0.245605 5.00772 0.655328 5.00772 1.1561C5.00772 2.29422 5.18982 3.38681 5.5267 4.40656C5.62685 4.72524 5.55401 5.08033 5.29908 5.33527L3.29599 7.33836Z"
+                          fill="black"
+                        />
+                      </svg>
+                      <span>Call/DM: +234 906 522 2544</span>
+                    </div>
+                    <div class="call-div" id="email-span">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="15"
+                        viewBox="0 0 20 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M17.34 0.395508H2.1675C1.59264 0.395508 1.04133 0.623869 0.634846 1.03035C0.228361 1.43684 0 1.98815 0 2.56301V12.3168C0 12.8916 0.228361 13.4429 0.634846 13.8494C1.04133 14.2559 1.59264 14.4843 2.1675 14.4843H17.34C17.9148 14.4843 18.4662 14.2559 18.8726 13.8494C19.2791 13.4429 19.5075 12.8916 19.5075 12.3168V2.56301C19.5075 1.98815 19.2791 1.43684 18.8726 1.03035C18.4662 0.623869 17.9148 0.395508 17.34 0.395508ZM6.84496 8.32422L8.58113 9.84147C8.91167 10.1297 9.33 10.2728 9.75375 10.2728C10.1775 10.2728 10.5958 10.1287 10.9264 9.84147L12.6625 8.32422L12.6224 8.36432L16.5738 12.3157H2.93371L6.88506 8.36432L6.84496 8.32422ZM2.1675 11.5505V4.23198L6.07117 7.64687L2.1675 11.5505ZM13.4363 7.64687L17.34 4.23198V11.5473L13.4363 7.64687ZM17.34 2.56301V2.79059L10.2133 9.02649C10.0827 9.13059 9.92071 9.18729 9.75375 9.18729C9.58678 9.18729 9.42477 9.13059 9.29424 9.02649L2.1675 2.79059V2.56301H17.34Z"
+                          fill="black"
+                        />
+                      </svg>
+                      <span>Email: example@gmail.com</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Form  -->
+                <form class="nav-form">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search for a product or brand"
+                    aria-label="Search"
+                  />
+                  <span>
+                    <svg
+                      width="23"
+                      height="23"
+                      viewBox="0 0 23 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.75 13.86H14.7546L14.4018 13.5198C15.6793 12.0381 16.3814 10.1464 16.38 8.19C16.38 6.57017 15.8997 4.98672 14.9997 3.63988C14.0998 2.29305 12.8207 1.24331 11.3242 0.62343C9.82765 0.0035486 8.18092 -0.158641 6.59221 0.157372C5.00351 0.473385 3.54419 1.25341 2.3988 2.3988C1.25341 3.54419 0.473385 5.00351 0.157372 6.59221C-0.158641 8.18092 0.0035486 9.82765 0.62343 11.3242C1.24331 12.8207 2.29305 14.0998 3.63988 14.9997C4.98672 15.8997 6.57017 16.38 8.19 16.38C10.2186 16.38 12.0834 15.6366 13.5198 14.4018L13.86 14.7546V15.75L20.16 22.0374L22.0374 20.16L15.75 13.86ZM8.19 13.86C5.0526 13.86 2.52 11.3274 2.52 8.19C2.52 5.0526 5.0526 2.52 8.19 2.52C11.3274 2.52 13.86 5.0526 13.86 8.19C13.86 11.3274 11.3274 13.86 8.19 13.86Z"
+                        fill="#656565"
+                      />
+                    </svg>
+                  </span>
+                </form>
+              </div>
+            </div>
+
+            <!--User/Shop Icons-->
+            <div class="right-icons">
+              <!-- Account Icon Div -->
+              <div class="d-flex">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                >
+                  <path
+                    d="M16.96 10.6004C16.96 11.7249 16.5133 12.8033 15.7181 13.5985C14.923 14.3936 13.8445 14.8404 12.72 14.8404C11.5955 14.8404 10.517 14.3936 9.72185 13.5985C8.92669 12.8033 8.47998 11.7249 8.47998 10.6004C8.47998 9.47583 8.92669 8.39737 9.72185 7.60222C10.517 6.80706 11.5955 6.36035 12.72 6.36035C13.8445 6.36035 14.923 6.80706 15.7181 7.60222C16.5133 8.39737 16.96 9.47583 16.96 10.6004Z"
+                    fill="black"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.2876 23.3116C6.63413 23.0848 2.12012 18.4293 2.12012 12.7201C2.12012 6.86574 6.86574 2.12012 12.7201 2.12012C18.5745 2.12012 23.3201 6.86574 23.3201 12.7201C23.3201 18.5745 18.5745 23.3201 12.7201 23.3201C12.6717 23.3204 12.6233 23.3204 12.5749 23.3201C12.479 23.3201 12.383 23.3169 12.2876 23.3116ZM5.9181 19.4087C5.83884 19.1811 5.81187 18.9386 5.83917 18.6991C5.86647 18.4597 5.94736 18.2295 6.07581 18.0256C6.20427 17.8216 6.377 17.6493 6.58119 17.5213C6.78538 17.3932 7.01578 17.3129 7.25529 17.2861C11.3872 16.8287 14.0785 16.87 18.1902 17.2956C18.4301 17.3206 18.661 17.4 18.8656 17.5277C19.0701 17.6554 19.2427 17.8281 19.3704 18.0327C19.4981 18.2372 19.5774 18.4682 19.6023 18.7081C19.6272 18.9479 19.5971 19.1902 19.5142 19.4167C21.2764 17.6337 22.2633 15.227 22.2601 12.7201C22.2601 7.45139 17.9888 3.18012 12.7201 3.18012C7.45139 3.18012 3.18012 7.45139 3.18012 12.7201C3.18012 15.3256 4.22475 17.6873 5.9181 19.4087Z"
+                    fill="black"
+                  />
+                </svg>
+                <span class="account-span">Account</span>
+              </div>
+              <!-- Cart Icon Div -->
+              <div class="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="25"
+                  viewBox="0 0 19 25"
+                  fill="none"
+                >
+                  <path
+                    d="M2.55559 24.5102C1.95299 24.5102 1.44995 24.3084 1.04647 23.905C0.642118 23.5006 0.439941 22.9971 0.439941 22.3945V8.28583C0.439941 7.68323 0.642118 7.18019 1.04647 6.77671C1.44995 6.37235 1.95299 6.17018 2.55559 6.17018H5.02494V5.51518C5.02494 4.24186 5.47078 3.15936 6.36245 2.26769C7.25413 1.37601 8.33662 0.930176 9.60994 0.930176C10.8833 0.930176 11.9658 1.37601 12.8574 2.26769C13.7491 3.15936 14.1949 4.24186 14.1949 5.51518V6.17018H16.6643C17.2669 6.17018 17.7699 6.37235 18.1734 6.77671C18.5778 7.18019 18.7799 7.68323 18.7799 8.28583V22.3945C18.7799 22.9971 18.5782 23.5002 18.1747 23.9036C17.7704 24.308 17.2669 24.5102 16.6643 24.5102H2.55559ZM2.55559 23.2002H16.6643C16.8652 23.2002 17.0499 23.1163 17.2184 22.9487C17.3861 22.7801 17.4699 22.5954 17.4699 22.3945V8.28583C17.4699 8.08496 17.3861 7.90025 17.2184 7.7317C17.0499 7.56402 16.8652 7.48018 16.6643 7.48018H14.1949V10.7552C14.1949 10.9412 14.1325 11.0971 14.0076 11.2228C13.8819 11.3477 13.726 11.4102 13.5399 11.4102C13.3539 11.4102 13.198 11.3477 13.0723 11.2228C12.9474 11.0971 12.8849 10.9412 12.8849 10.7552V7.48018H6.33494V10.7552C6.33494 10.9412 6.2725 11.0971 6.14761 11.2228C6.02185 11.3477 5.86596 11.4102 5.67994 11.4102C5.49392 11.4102 5.33803 11.3477 5.21227 11.2228C5.08738 11.0971 5.02494 10.9412 5.02494 10.7552V7.48018H2.55559C2.35472 7.48018 2.17001 7.56402 2.00146 7.7317C1.83378 7.90025 1.74994 8.08496 1.74994 8.28583V22.3945C1.74994 22.5954 1.83378 22.7801 2.00146 22.9487C2.17001 23.1163 2.35472 23.2002 2.55559 23.2002ZM6.33494 6.17018H12.8849V5.51518C12.8849 4.59294 12.5697 3.81654 11.9391 3.186C11.3086 2.55545 10.5322 2.24018 9.60994 2.24018C8.6877 2.24018 7.91131 2.55545 7.28076 3.186C6.65022 3.81654 6.33494 4.59294 6.33494 5.51518V6.17018Z"
+                    fill="black"
+                  />
+                </svg>
+                <span class="account-span">Cart</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Tab Nav -->
+        <ul class="Tab-Nav">
+          <li>Brands</li>
+          <li>Face serums</li>
+          <li>Body washes</li>
+          <li>Toners and hydrators</li>
+          <li>Body scrubs</li>
+          <li>Sunscreens</li>
+          <li>Face moisturizers and creams</li>
+          <li>Exfoliants</li>
+          <li>Cleansing oils and balms</li>
+        </ul>
+      </div>
+    </div>
+    <main>
+      <div>
+        <div class="productLike">
+          <svg
+            width="20"
+            height="19"
+            viewBox="0 0 20 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.22318 16.2905L9.22174 16.2892C6.62708 13.9364 4.55406 12.0515 3.11801 10.2946C1.69296 8.55118 1 7.05624 1 5.5C1 2.96348 2.97109 1 5.5 1C6.9377 1 8.33413 1.67446 9.24117 2.73128L10 3.61543L10.7588 2.73128C11.6659 1.67446 13.0623 1 14.5 1C17.0289 1 19 2.96348 19 5.5C19 7.05624 18.307 8.55118 16.882 10.2946C15.4459 12.0515 13.3729 13.9364 10.7783 16.2892L10.7768 16.2905L10 16.9977L9.22318 16.2905Z"
+              stroke="black"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+        <div class="productImage-div">
+          <img
+            src="./productImages/Rectangle 50.png"
+            alt=""
+            class="rounded mx-auto d-block"
+          />
+          <img
+            src="./productImages/WhatsApp Image 2024-01-13 at 14.18 5.png"
+            alt=""
+          />
+          <img
+            src="./productImages/WhatsApp Image 2024-01-13 at 14.18 6.png"
+            class="rounded mx-auto d-block"
+            alt=""
+          />
+        </div>
+      </div>
+      <div>
+       <div>
+        <p style="font-family: Garamond;
+        font-size: 16px;
+        margin-top: 0.8rem;
+        padding-left: 1rem;
+        ">Clean It Zero</p>
+        <svg
+          width="91"
+          height="17"
+          viewBox="0 0 91 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="text-align: left;
+          padding-left: 0.8rem; margin-top: -2.5rem;"
+        >
+          <path
+            d="M8.55439 2.74859C8.86388 1.84902 10.1361 1.84901 10.4456 2.74859L11.2885 5.19867C11.4274 5.60235 11.8072 5.87336 12.2341 5.87336L14.8347 5.87336C15.8172 5.87336 16.2106 7.14201 15.4005 7.69791L13.3968 9.07284C13.0261 9.32718 12.8707 9.79762 13.0169 10.2227L13.8052 12.5139C14.1187 13.4252 13.0885 14.209 12.2938 13.6638L10.0658 12.1349C9.72487 11.901 9.27513 11.901 8.93421 12.1349L6.70621 13.6638C5.91153 14.209 4.88128 13.4252 5.19482 12.5139L5.98306 10.2227C6.1293 9.79762 5.97391 9.32718 5.60324 9.07284L3.59949 7.69791C2.78937 7.14202 3.18278 5.87336 4.16528 5.87336L6.76588 5.87336C7.19278 5.87336 7.57261 5.60235 7.71149 5.19867L8.55439 2.74859Z"
+            fill="#F8BD00"
+          />
+          <path
+            d="M26.5544 2.74859C26.8639 1.84902 28.1361 1.84901 28.4456 2.74859L29.2885 5.19867C29.4274 5.60235 29.8072 5.87336 30.2341 5.87336L32.8347 5.87336C33.8172 5.87336 34.2106 7.14201 33.4005 7.69791L31.3968 9.07284C31.0261 9.32718 30.8707 9.79762 31.0169 10.2227L31.8052 12.5139C32.1187 13.4252 31.0885 14.209 30.2938 13.6638L28.0658 12.1349C27.7249 11.901 27.2751 11.901 26.9342 12.1349L24.7062 13.6638C23.9115 14.209 22.8813 13.4252 23.1948 12.5139L23.9831 10.2227C24.1293 9.79762 23.9739 9.32718 23.6032 9.07284L21.5995 7.69791C20.7894 7.14202 21.1828 5.87336 22.1653 5.87336L24.7659 5.87336C25.1928 5.87336 25.5726 5.60235 25.7115 5.19867L26.5544 2.74859Z"
+            fill="#F8BD00"
+          />
+          <path
+            d="M44.5544 2.74859C44.8639 1.84902 46.1361 1.84901 46.4456 2.74859L47.2885 5.19867C47.4274 5.60235 47.8072 5.87336 48.2341 5.87336L50.8347 5.87336C51.8172 5.87336 52.2106 7.14201 51.4005 7.69791L49.3968 9.07284C49.0261 9.32718 48.8707 9.79762 49.0169 10.2227L49.8052 12.5139C50.1187 13.4252 49.0885 14.209 48.2938 13.6638L46.0658 12.1349C45.7249 11.901 45.2751 11.901 44.9342 12.1349L42.7062 13.6638C41.9115 14.209 40.8813 13.4252 41.1948 12.5139L41.9831 10.2227C42.1293 9.79762 41.9739 9.32718 41.6032 9.07284L39.5995 7.69791C38.7894 7.14202 39.1828 5.87336 40.1653 5.87336L42.7659 5.87336C43.1928 5.87336 43.5726 5.60235 43.7115 5.19867L44.5544 2.74859Z"
+            fill="#F8BD00"
+          />
+          <path
+            d="M62.5544 2.74859C62.8639 1.84902 64.1361 1.84901 64.4456 2.74859L65.2885 5.19867C65.4274 5.60235 65.8072 5.87336 66.2341 5.87336L68.8347 5.87336C69.8172 5.87336 70.2106 7.14201 69.4005 7.69791L67.3968 9.07284C67.0261 9.32718 66.8707 9.79762 67.0169 10.2227L67.8052 12.5139C68.1187 13.4252 67.0885 14.209 66.2938 13.6638L64.0658 12.1349C63.7249 11.901 63.2751 11.901 62.9342 12.1349L60.7062 13.6638C59.9115 14.209 58.8813 13.4252 59.1948 12.5139L59.9831 10.2227C60.1293 9.79762 59.9739 9.32718 59.6032 9.07284L57.5995 7.69791C56.7894 7.14202 57.1828 5.87336 58.1653 5.87336L60.7659 5.87336C61.1928 5.87336 61.5726 5.60235 61.7115 5.19867L62.5544 2.74859Z"
+            fill="#F8BD00"
+          />
+          <path
+            d="M80.5544 2.74859C80.8639 1.84902 82.1361 1.84901 82.4456 2.74859L83.2885 5.19867C83.4274 5.60235 83.8072 5.87336 84.2341 5.87336L86.8347 5.87336C87.8172 5.87336 88.2106 7.14201 87.4005 7.69791L85.3968 9.07284C85.0261 9.32718 84.8707 9.79762 85.0169 10.2227L85.8052 12.5139C86.1187 13.4252 85.0885 14.209 84.2938 13.6638L82.0658 12.1349C81.7249 11.901 81.2751 11.901 80.9342 12.1349L78.7062 13.6638C77.9115 14.209 76.8813 13.4252 77.1948 12.5139L77.9831 10.2227C78.1293 9.79762 77.9739 9.32718 77.6032 9.07284L75.5995 7.69791C74.7894 7.14202 75.1828 5.87336 76.1653 5.87336L78.7659 5.87336C79.1928 5.87336 79.5726 5.60235 79.7115 5.19867L80.5544 2.74859Z"
+            fill="#F8BD00"
+          />
+        </svg>
+       </div>
+          <p class="p-description-text">
+            The Clean It Zero line from Banila Co. is a collection of cleansing
+            balms and other skincare products known for their gentle yet effective
+            cleansing power. The hero product is the Clean It Zero Original
+            Cleansing Balm, a sherbet-textured balm that melts into a lightweight
+            oil on contact with skin.
+          </p>
+        <div style="display: flex; align-items: center; justify-content:space-between;">
+          <p style="font-family: Lora;
+        font-size: 19px;
+        font-weight: 700;
+        padding-left: 1rem;
+        margin-top: -0.8rem;
+        ">
+          <svg style="margin-top:-0.5rem;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect y="0.25" width="23.5" height="23.5" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_236_2058" transform="scale(0.00195312)"/>
+            </pattern>
+            <image id="image0_236_2058" width="512" height="512" xlink:href="data:image/png;base64,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"/>
+            </defs>
+            </svg>
+          17,000</p>
+        <div style="display: flex; gap: 2px; margin-right: 1rem; margin-top: -14px;">
+          <div
+          style="width: 33px; height: 33px; border: 1px solid black; border-radius: 100%; display: flex;justify-content: center; align-items: center;"
+          >+</div>
+          <p style="margin-top: 5px;">1</p>
+          <div style="width: 33px; height: 33px; border: 1px solid black; border-radius: 100%; display: flex;justify-content: center; align-items: center;">-</div>
+        </div>
+        </div>
+        <hr style="width: 90%; margin: auto;">
+        <div style="display: flex; align-items: center; justify-content:space-between; margin-left: 16px; margin-right: 20px; margin-top: 10px;">
+          <p style="font-family: Lora;
+          font-size: 14px;
+          text-align: left;
+          "> How to Use</p>
+          <svg
+            width="12"
+            height="6"
+            viewBox="0 0 12 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.51563 5.59437C5.78314 5.86188 6.21686 5.86188 6.48437 5.59437L10.8437 1.23506C11.1112 0.967547 11.1112 0.53383 10.8437 0.266321C10.5762 -0.00118856 10.1425 -0.00118857 9.87494 0.266321L6 4.14126L2.12506 0.26632C1.85755 -0.00118894 1.42383 -0.00118896 1.15632 0.26632C0.888811 0.533829 0.888811 0.967547 1.15632 1.23506L5.51563 5.59437ZM5.315 4L5.315 5.11L6.685 5.11L6.685 4L5.315 4Z"
+              fill="#9A9A9A"
+            />
+          </svg>
+        </div>
+        
+        <hr style="width: 90%; margin: auto;">
+        <div style="display: flex; align-items: center; justify-content:space-between; margin-left: 16px; margin-right: 20px; margin-top: 10px;">
+          <p style="font-family: Lora;
+          font-size: 14px;
+          text-align: left;
+          ">Ingredients</p>
+          <svg
+            width="12"
+            height="6"
+            viewBox="0 0 12 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.51563 5.59437C5.78314 5.86188 6.21686 5.86188 6.48437 5.59437L10.8437 1.23506C11.1112 0.967547 11.1112 0.53383 10.8437 0.266321C10.5762 -0.00118856 10.1425 -0.00118857 9.87494 0.266321L6 4.14126L2.12506 0.26632C1.85755 -0.00118894 1.42383 -0.00118896 1.15632 0.26632C0.888811 0.533829 0.888811 0.967547 1.15632 1.23506L5.51563 5.59437ZM5.315 4L5.315 5.11L6.685 5.11L6.685 4L5.315 4Z"
+              fill="#9A9A9A"
+            />
+          </svg>
+        </div>
+        <hr style="width: 90%; margin: auto; margin-bottom: 1rem;">
+        
+        <div class="d-grid gap-2 col-10 mx-auto">
+          <button type="button" class="btn">Buy Now</button>
+          <button class="btn" type="button">Add to Cart</button>
+        </div>
+      </div>
+      <div>
+        <div class="container place-items-center">
+          <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 row-cols-lg-5  pe-3">
+            <div class="col">
+              <div class="product-div-item">
+                <img
+                  src="./productImages/WhatsApp Image 2024-01-13 at 14.18 20.png"
+                  alt="Product1"
+                  style="width: 110px"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="15"
+                  viewBox="0 0 17 15"
+                  fill="none"
+                  class="like"
+                >
+                  <path
+                    d="M8.41454 13.6479L8.41453 13.6479L8.4116 13.6495C8.40263 13.6543 8.39261 13.6569 8.38242 13.6569C8.37223 13.6569 8.36221 13.6543 8.35324 13.6495L8.35031 13.6479C8.21207 13.5748 6.3506 12.5602 4.53125 10.9669C2.6856 9.35061 1.02016 7.25724 1.02002 5.03431C1.02125 4.0129 1.42754 3.03367 2.1498 2.31142C2.87205 1.58917 3.85128 1.18287 4.8727 1.18164C6.17609 1.18172 7.29242 1.73974 7.98258 2.65893L8.38242 3.19146L8.78226 2.65893C9.47242 1.73974 10.5888 1.18172 11.8921 1.18164C12.9136 1.18287 13.8928 1.58916 14.615 2.31142C15.3374 3.03374 15.7437 4.01309 15.7448 5.0346C15.7445 7.25742 14.0792 9.35068 12.2336 10.9669C10.4142 12.5602 8.55277 13.5748 8.41454 13.6479Z"
+                    fill="#A5A5A5"
+                    stroke="#A5A5A5"
+                  />
+                </svg>
+                <div class="product-div-item-list">
+                  <p class="product-title">
+                    The Vitamin C 23
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="9"
+                      height="8"
+                      viewBox="0 0 9 8"
+                      fill="none"
+                      class="rating"
+                    >
+                      <path
+                        d="M4.34702 0.48807C4.50609 0.10156 5.05351 0.101559 5.21258 0.48807L5.95814 2.2996C6.03033 2.47499 6.20125 2.58948 6.39092 2.58948L8.52019 2.58948C8.9997 2.58948 9.16899 3.22486 8.75304 3.46344L7.23566 4.33379C7.03185 4.45069 6.94631 4.70059 7.03573 4.91787L7.65672 6.42672C7.82645 6.83911 7.37792 7.23268 6.99109 7.0108L5.01265 5.876C4.86844 5.79328 4.69116 5.79328 4.54695 5.876L2.56851 7.0108C2.18168 7.23268 1.73315 6.83911 1.90288 6.42672L2.52387 4.91787C2.61329 4.70059 2.52776 4.45069 2.32394 4.33379L0.80656 3.46344C0.390613 3.22486 0.5599 2.58948 1.03941 2.58948L3.16868 2.58948C3.35835 2.58948 3.52927 2.475 3.60146 2.2996L4.34702 0.48807Z"
+                        fill="#F8BD00"
+                      />
+                    </svg>
+  
+                    <span class="">4.5</span>
+                  </p>
+                  <p class="product-desc">All in one cream</p>
+                  <p class="product-price">Price.<span>3 Left</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-div-item">
+                <img
+                  src="./productImages/WhatsApp Image 2024-01-13 at 14.18 19.png"
+                  alt="Product1"
+                  style="width: 30px;"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="15"
+                  viewBox="0 0 17 15"
+                  fill="none"
+                  class="like"
+                >
+                  <path
+                    d="M8.41454 13.6479L8.41453 13.6479L8.4116 13.6495C8.40263 13.6543 8.39261 13.6569 8.38242 13.6569C8.37223 13.6569 8.36221 13.6543 8.35324 13.6495L8.35031 13.6479C8.21207 13.5748 6.3506 12.5602 4.53125 10.9669C2.6856 9.35061 1.02016 7.25724 1.02002 5.03431C1.02125 4.0129 1.42754 3.03367 2.1498 2.31142C2.87205 1.58917 3.85128 1.18287 4.8727 1.18164C6.17609 1.18172 7.29242 1.73974 7.98258 2.65893L8.38242 3.19146L8.78226 2.65893C9.47242 1.73974 10.5888 1.18172 11.8921 1.18164C12.9136 1.18287 13.8928 1.58916 14.615 2.31142C15.3374 3.03374 15.7437 4.01309 15.7448 5.0346C15.7445 7.25742 14.0792 9.35068 12.2336 10.9669C10.4142 12.5602 8.55277 13.5748 8.41454 13.6479Z"
+                    fill="#A5A5A5"
+                    stroke="#A5A5A5"
+                  />
+                </svg>
+                <div class="product-div-item-list">
+                  <p class="product-title">
+                    Biore UV
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="9"
+                      height="8"
+                      viewBox="0 0 9 8"
+                      fill="none"
+                      class="rating"
+                    >
+                      <path
+                        d="M4.34702 0.48807C4.50609 0.10156 5.05351 0.101559 5.21258 0.48807L5.95814 2.2996C6.03033 2.47499 6.20125 2.58948 6.39092 2.58948L8.52019 2.58948C8.9997 2.58948 9.16899 3.22486 8.75304 3.46344L7.23566 4.33379C7.03185 4.45069 6.94631 4.70059 7.03573 4.91787L7.65672 6.42672C7.82645 6.83911 7.37792 7.23268 6.99109 7.0108L5.01265 5.876C4.86844 5.79328 4.69116 5.79328 4.54695 5.876L2.56851 7.0108C2.18168 7.23268 1.73315 6.83911 1.90288 6.42672L2.52387 4.91787C2.61329 4.70059 2.52776 4.45069 2.32394 4.33379L0.80656 3.46344C0.390613 3.22486 0.5599 2.58948 1.03941 2.58948L3.16868 2.58948C3.35835 2.58948 3.52927 2.475 3.60146 2.2996L4.34702 0.48807Z"
+                        fill="#F8BD00"
+                      />
+                    </svg>
+  
+                    <span class="">4.5</span>
+                  </p>
+                  <p class="product-desc">Aqua rich</p>
+                  <p class="product-price">Price.<span>3 Left</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-div-item">
+                <img
+                  src="./productImages/WhatsApp Image 2024-01-13 at 14.18 15.png"
+                  alt="Product1"
+                  style="width: 30px"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="15"
+                  viewBox="0 0 17 15"
+                  fill="none"
+                  class="like"
+                >
+                  <path
+                    d="M8.41454 13.6479L8.41453 13.6479L8.4116 13.6495C8.40263 13.6543 8.39261 13.6569 8.38242 13.6569C8.37223 13.6569 8.36221 13.6543 8.35324 13.6495L8.35031 13.6479C8.21207 13.5748 6.3506 12.5602 4.53125 10.9669C2.6856 9.35061 1.02016 7.25724 1.02002 5.03431C1.02125 4.0129 1.42754 3.03367 2.1498 2.31142C2.87205 1.58917 3.85128 1.18287 4.8727 1.18164C6.17609 1.18172 7.29242 1.73974 7.98258 2.65893L8.38242 3.19146L8.78226 2.65893C9.47242 1.73974 10.5888 1.18172 11.8921 1.18164C12.9136 1.18287 13.8928 1.58916 14.615 2.31142C15.3374 3.03374 15.7437 4.01309 15.7448 5.0346C15.7445 7.25742 14.0792 9.35068 12.2336 10.9669C10.4142 12.5602 8.55277 13.5748 8.41454 13.6479Z"
+                    fill="#A5A5A5"
+                    stroke="#A5A5A5"
+                  />
+                </svg>
+                <div class="product-div-item-list">
+                  <p class="product-title">
+                    Hyaluronic Acid
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="9"
+                      height="8"
+                      viewBox="0 0 9 8"
+                      fill="none"
+                      class="rating"
+                    >
+                      <path
+                        d="M4.34702 0.48807C4.50609 0.10156 5.05351 0.101559 5.21258 0.48807L5.95814 2.2996C6.03033 2.47499 6.20125 2.58948 6.39092 2.58948L8.52019 2.58948C8.9997 2.58948 9.16899 3.22486 8.75304 3.46344L7.23566 4.33379C7.03185 4.45069 6.94631 4.70059 7.03573 4.91787L7.65672 6.42672C7.82645 6.83911 7.37792 7.23268 6.99109 7.0108L5.01265 5.876C4.86844 5.79328 4.69116 5.79328 4.54695 5.876L2.56851 7.0108C2.18168 7.23268 1.73315 6.83911 1.90288 6.42672L2.52387 4.91787C2.61329 4.70059 2.52776 4.45069 2.32394 4.33379L0.80656 3.46344C0.390613 3.22486 0.5599 2.58948 1.03941 2.58948L3.16868 2.58948C3.35835 2.58948 3.52927 2.475 3.60146 2.2996L4.34702 0.48807Z"
+                        fill="#F8BD00"
+                      />
+                    </svg>
+  
+                    <span class="">4.5</span>
+                  </p>
+                  <p class="product-desc">Airy sun stick</p>
+                  <p class="product-price">Price.<span>3 Left</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-div-item">
+                <img
+                  src="./productImages/WhatsApp Image 2024-01-13 at 14.18 18.png"
+                  alt="Product1"
+                  style="width: 110px"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="15"
+                  viewBox="0 0 17 15"
+                  fill="none"
+                  class="like"
+                >
+                  <path
+                    d="M8.41454 13.6479L8.41453 13.6479L8.4116 13.6495C8.40263 13.6543 8.39261 13.6569 8.38242 13.6569C8.37223 13.6569 8.36221 13.6543 8.35324 13.6495L8.35031 13.6479C8.21207 13.5748 6.3506 12.5602 4.53125 10.9669C2.6856 9.35061 1.02016 7.25724 1.02002 5.03431C1.02125 4.0129 1.42754 3.03367 2.1498 2.31142C2.87205 1.58917 3.85128 1.18287 4.8727 1.18164C6.17609 1.18172 7.29242 1.73974 7.98258 2.65893L8.38242 3.19146L8.78226 2.65893C9.47242 1.73974 10.5888 1.18172 11.8921 1.18164C12.9136 1.18287 13.8928 1.58916 14.615 2.31142C15.3374 3.03374 15.7437 4.01309 15.7448 5.0346C15.7445 7.25742 14.0792 9.35068 12.2336 10.9669C10.4142 12.5602 8.55277 13.5748 8.41454 13.6479Z"
+                    fill="#A5A5A5"
+                    stroke="#A5A5A5"
+                  />
+                </svg>
+                <div class="product-div-item-list">
+                  <p class="product-title">
+                    Skin Aqua
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="9"
+                      height="8"
+                      viewBox="0 0 9 8"
+                      fill="none"
+                      class="rating"
+                    >
+                      <path
+                        d="M4.34702 0.48807C4.50609 0.10156 5.05351 0.101559 5.21258 0.48807L5.95814 2.2996C6.03033 2.47499 6.20125 2.58948 6.39092 2.58948L8.52019 2.58948C8.9997 2.58948 9.16899 3.22486 8.75304 3.46344L7.23566 4.33379C7.03185 4.45069 6.94631 4.70059 7.03573 4.91787L7.65672 6.42672C7.82645 6.83911 7.37792 7.23268 6.99109 7.0108L5.01265 5.876C4.86844 5.79328 4.69116 5.79328 4.54695 5.876L2.56851 7.0108C2.18168 7.23268 1.73315 6.83911 1.90288 6.42672L2.52387 4.91787C2.61329 4.70059 2.52776 4.45069 2.32394 4.33379L0.80656 3.46344C0.390613 3.22486 0.5599 2.58948 1.03941 2.58948L3.16868 2.58948C3.35835 2.58948 3.52927 2.475 3.60146 2.2996L4.34702 0.48807Z"
+                        fill="#F8BD00"
+                      />
+                    </svg>
+  
+                    <span class="">4.5</span>
+                  </p>
+                  <p class="product-desc">Intensive Cream</p>
+                  <p class="product-price">Price.<span>3 Left</span></p>
+                </div>
+              </div>
+            </div>
+      </div>
+      </div>
+    </main>
+    <!--Boostrap JS CDN Link-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
