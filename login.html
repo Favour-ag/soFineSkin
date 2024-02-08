@@ -37,8 +37,13 @@
         height: 131.72px;
         margin-top: 20px;
       }
+      form {
+        margin-top: 2.5rem;
+      }
       .sigIn-div {
         text-align: center;
+        line-height: 0;
+        margin-bottom: 3rem;
       }
       .sigIn-div p:nth-child(1) {
         font-family: Garamond;
@@ -55,7 +60,11 @@
     </style>
   </head>
   <body>
-    <img src="./images/logo.png" alt="" />
+    <img
+      src="./images/logo.png"
+      alt=""
+      style="width: 149.52px; height: 131.72px; margin-top: 1.5rem"
+    />
     <form>
       <div class="sigIn-div">
         <p>Sign In</p>
@@ -77,12 +86,30 @@
           type="password"
           class="form-control"
           id="exampleInputPassword1"
+          placeholder="Enter Password"
         />
-        <h6 class="text-end">Forgot your password?</h6>
+        <h6
+          class="text-end"
+          style="
+            font-family: Outfit;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+          "
+        >
+          <a
+            href=""
+            class="link-offset-2 link-underline link-underline-opacity-0 link-secondary"
+          >
+            Forgot your password?
+          </a>
+        </h6>
       </div>
       <button type="button" class="btn">Sign In</button>
       <h6 class="text-center">Dont have an account?</h6>
-      <h6 class="text-center"><a href="signUp.html">Create One</a></h6>
+      <h6 class="text-center" style="margin-top: -0.7rem">
+        <a href="register.html" class="link-secondary">Create One</a>
+      </h6>
     </form>
     <!--Boostrap JS CDN Link-->
     <script src="./js/bootstrap.bundle.min.js"></script>

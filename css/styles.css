@@ -233,34 +233,39 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 8px;
-  gap: 5px;
+  font-family: Lora;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .footer-div-items-left {
   display: grid;
   place-items: start;
-  line-height: 10px;
+  line-height: 60px;
   width: 100%;
   height: 100%;
-  /* background-color: red; */
 }
 .footer-div-items-left > ul {
-  /* list-style-type: none;  */
-  line-height: 1;
+  list-style-type: none;
+  line-height: 1.5;
   text-align: left;
 }
 .footer-div-items-center {
   display: grid;
-  place-items: center;
-  line-height: 10px;
+  place-items: start;
   width: 100%;
   height: 100%;
-  /* background-color: pink; */
+}
+
+.footer-div-items-center > ul {
+  list-style-type: none;
+  line-height: 1.5;
+  text-align: center;
 }
 .footer-div-items-right {
   display: grid;
   place-items: start;
-  line-height: 10px;
+  line-height: 1px;
   width: 100%;
   height: 100%;
   /* background-color: yellow; */
@@ -271,15 +276,13 @@ footer {
   .account-span {
     display: none;
   }
-  .nav-form {
+  #nav-input {
     display: none;
   }
   .Tab-Nav {
     display: none;
   }
-  footer img {
-    margin-right: 1rem;
-  }
+
   .inner-nav-outline-div {
     background-color: #fff;
     width: 100%;
@@ -292,12 +295,15 @@ footer {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   main {
     margin-top: 9rem;
   }
   .search-icon {
     display: none;
+  }
+  #nav-input {
+    width: 60%;
   }
   .navbar-nav {
     display: none;
@@ -353,7 +359,6 @@ footer {
     margin-left: 55px;
   }
   .footer-div-items {
-    /* background-color: red; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -363,19 +368,20 @@ footer {
     margin-right: 5rem;
   }
   .footer-div-items-left {
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
     /* background-color: red; */
   }
+
   footer img {
     margin-left: -6rem;
   }
   .footer-div-items-center {
     display: grid;
     place-items: start;
-    line-height: 10px;
+    line-height: 1px;
     width: 100%;
     height: 100%;
-    /* background-color: pink; */
+    /* background-color: yellow; */
   }
   .socials-center {
     display: none;

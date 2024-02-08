@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Boostrap CSS CDN Link-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!--Css Link-->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>SoFineSkin</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar-div {
+        z-index: 10;
+      }
+
+      form {
+        width: 100vw;
+        padding: 20px;
+      }
+
+      .form-group.required .form-label:after {
+        content: "*";
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar-div">
+      <div class="inner-nav-outline-div">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <!--Menu/Search Bar(s)-->
+            <div class="nav-menu">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <svg
+                class="search-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+              >
+                <path
+                  d="M15.75 13.86H14.7546L14.4018 13.5198C15.6793 12.0381 16.3814 10.1464 16.38 8.19C16.38 6.57017 15.8997 4.98672 14.9997 3.63988C14.0998 2.29305 12.8207 1.24331 11.3242 0.62343C9.82765 0.0035486 8.18092 -0.158641 6.59221 0.157372C5.00351 0.473385 3.54419 1.25341 2.3988 2.3988C1.25341 3.54419 0.473385 5.00351 0.157372 6.59221C-0.158641 8.18092 0.0035486 9.82765 0.62343 11.3242C1.24331 12.8207 2.29305 14.0998 3.63988 14.9997C4.98672 15.8997 6.57017 16.38 8.19 16.38C10.2186 16.38 12.0834 15.6366 13.5198 14.4018L13.86 14.7546V15.75L20.16 22.0374L22.0374 20.16L15.75 13.86ZM8.19 13.86C5.0526 13.86 2.52 11.3274 2.52 8.19C2.52 5.0526 5.0526 2.52 8.19 2.52C11.3274 2.52 13.86 5.0526 13.86 8.19C13.86 11.3274 11.3274 13.86 8.19 13.86Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+            <!--Logo-->
+            <img src="./images/logo.png" alt="" class="logo" />
+            <div
+              class="offcanvas offcanvas-start w-75 h-50"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <div class="home-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="21"
+                    viewBox="0 0 22 21"
+                    fill="none"
+                  >
+                    <path
+                      d="M21.5447 10.216L11.5489 0.227488C11.4769 0.155375 11.3914 0.0981632 11.2973 0.0591279C11.2032 0.0200927 11.1023 0 11.0005 0C10.8986 0 10.7977 0.0200927 10.7036 0.0591279C10.6095 0.0981632 10.524 0.155375 10.452 0.227488L0.456229 10.216C0.165019 10.5072 0 10.9028 0 11.3153C0 12.1719 0.696477 12.8684 1.55312 12.8684H2.60633V19.9958C2.60633 20.4253 2.95335 20.7723 3.38289 20.7723H9.44734V15.3364H12.1653V20.7723H18.618C19.0476 20.7723 19.3946 20.4253 19.3946 19.9958V12.8684H20.4478C20.8603 12.8684 21.2559 12.7058 21.5471 12.4122C22.1514 11.8055 22.1514 10.8227 21.5447 10.216Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                  >
+                    <path
+                      d="M15.75 13.86H14.7546L14.4018 13.5198C15.6793 12.0381 16.3814 10.1464 16.38 8.19C16.38 6.57017 15.8997 4.98672 14.9997 3.63988C14.0998 2.29305 12.8207 1.24331 11.3242 0.62343C9.82765 0.0035486 8.18092 -0.158641 6.59221 0.157372C5.00351 0.473385 3.54419 1.25341 2.3988 2.3988C1.25341 3.54419 0.473385 5.00351 0.157372 6.59221C-0.158641 8.18092 0.0035486 9.82765 0.62343 11.3242C1.24331 12.8207 2.29305 14.0998 3.63988 14.9997C4.98672 15.8997 6.57017 16.38 8.19 16.38C10.2186 16.38 12.0834 15.6366 13.5198 14.4018L13.86 14.7546V15.75L20.16 22.0374L22.0374 20.16L15.75 13.86ZM8.19 13.86C5.0526 13.86 2.52 11.3274 2.52 8.19C2.52 5.0526 5.0526 2.52 8.19 2.52C11.3274 2.52 13.86 5.0526 13.86 8.19C13.86 11.3274 11.3274 13.86 8.19 13.86Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- Menu -->
+              <div
+                class="offcanvas-body justify-content-center flex-grow-1 pe-3"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link mx-lg-2 active"
+                      aria-current="page"
+                      href="#"
+                      >Brands</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Browse by
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Categories
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="enquiries-div">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                  >
+                    <path
+                      d="M16.96 10.6004C16.96 11.7249 16.5133 12.8033 15.7181 13.5985C14.923 14.3936 13.8445 14.8404 12.72 14.8404C11.5955 14.8404 10.517 14.3936 9.72185 13.5985C8.92669 12.8033 8.47998 11.7249 8.47998 10.6004C8.47998 9.47583 8.92669 8.39737 9.72185 7.60222C10.517 6.80706 11.5955 6.36035 12.72 6.36035C13.8445 6.36035 14.923 6.80706 15.7181 7.60222C16.5133 8.39737 16.96 9.47583 16.96 10.6004Z"
+                      fill="black"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.2876 23.3116C6.63413 23.0848 2.12012 18.4293 2.12012 12.7201C2.12012 6.86574 6.86574 2.12012 12.7201 2.12012C18.5745 2.12012 23.3201 6.86574 23.3201 12.7201C23.3201 18.5745 18.5745 23.3201 12.7201 23.3201C12.6717 23.3204 12.6233 23.3204 12.5749 23.3201C12.479 23.3201 12.383 23.3169 12.2876 23.3116ZM5.9181 19.4087C5.83884 19.1811 5.81187 18.9386 5.83917 18.6991C5.86647 18.4597 5.94736 18.2295 6.07581 18.0256C6.20427 17.8216 6.377 17.6493 6.58119 17.5213C6.78538 17.3932 7.01578 17.3129 7.25529 17.2861C11.3872 16.8287 14.0785 16.87 18.1902 17.2956C18.4301 17.3206 18.661 17.4 18.8656 17.5277C19.0701 17.6554 19.2427 17.8281 19.3704 18.0327C19.4981 18.2372 19.5774 18.4682 19.6023 18.7081C19.6272 18.9479 19.5971 19.1902 19.5142 19.4167C21.2764 17.6337 22.2633 15.227 22.2601 12.7201C22.2601 7.45139 17.9888 3.18012 12.7201 3.18012C7.45139 3.18012 3.18012 7.45139 3.18012 12.7201C3.18012 15.3256 4.22475 17.6873 5.9181 19.4087Z"
+                      fill="black"
+                    />
+                  </svg>
+                  Login/Sign Up
+                  <div class="contact-info">
+                    <p>Contact Us</p>
+                    <div class="call-div">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="17"
+                        viewBox="0 0 17 17"
+                        fill="none"
+                      >
+                        <path
+                          d="M3.29599 7.33836C4.6071 9.91505 6.71945 12.0183 9.29615 13.3385L11.2992 11.3354C11.5451 11.0896 11.9093 11.0076 12.2279 11.1169C13.2477 11.4538 14.3494 11.6359 15.4784 11.6359C15.9792 11.6359 16.3889 12.0456 16.3889 12.5464V15.724C16.3889 16.2248 15.9792 16.6345 15.4784 16.6345C6.92886 16.6345 0 9.70564 0 1.1561C0 0.655328 0.409722 0.245605 0.910494 0.245605H4.09722C4.598 0.245605 5.00772 0.655328 5.00772 1.1561C5.00772 2.29422 5.18982 3.38681 5.5267 4.40656C5.62685 4.72524 5.55401 5.08033 5.29908 5.33527L3.29599 7.33836Z"
+                          fill="black"
+                        />
+                      </svg>
+                      <span>Call/DM: +234 906 522 2544</span>
+                    </div>
+                    <div class="call-div" id="email-span">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="15"
+                        viewBox="0 0 20 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M17.34 0.395508H2.1675C1.59264 0.395508 1.04133 0.623869 0.634846 1.03035C0.228361 1.43684 0 1.98815 0 2.56301V12.3168C0 12.8916 0.228361 13.4429 0.634846 13.8494C1.04133 14.2559 1.59264 14.4843 2.1675 14.4843H17.34C17.9148 14.4843 18.4662 14.2559 18.8726 13.8494C19.2791 13.4429 19.5075 12.8916 19.5075 12.3168V2.56301C19.5075 1.98815 19.2791 1.43684 18.8726 1.03035C18.4662 0.623869 17.9148 0.395508 17.34 0.395508ZM6.84496 8.32422L8.58113 9.84147C8.91167 10.1297 9.33 10.2728 9.75375 10.2728C10.1775 10.2728 10.5958 10.1287 10.9264 9.84147L12.6625 8.32422L12.6224 8.36432L16.5738 12.3157H2.93371L6.88506 8.36432L6.84496 8.32422ZM2.1675 11.5505V4.23198L6.07117 7.64687L2.1675 11.5505ZM13.4363 7.64687L17.34 4.23198V11.5473L13.4363 7.64687ZM17.34 2.56301V2.79059L10.2133 9.02649C10.0827 9.13059 9.92071 9.18729 9.75375 9.18729C9.58678 9.18729 9.42477 9.13059 9.29424 9.02649L2.1675 2.79059V2.56301H17.34Z"
+                          fill="black"
+                        />
+                      </svg>
+                      <span>Email: example@gmail.com</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Form  -->
+                <form class="nav-form">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search for a product or brand"
+                    aria-label="Search"
+                  />
+                  <span>
+                    <svg
+                      width="23"
+                      height="23"
+                      viewBox="0 0 23 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.75 13.86H14.7546L14.4018 13.5198C15.6793 12.0381 16.3814 10.1464 16.38 8.19C16.38 6.57017 15.8997 4.98672 14.9997 3.63988C14.0998 2.29305 12.8207 1.24331 11.3242 0.62343C9.82765 0.0035486 8.18092 -0.158641 6.59221 0.157372C5.00351 0.473385 3.54419 1.25341 2.3988 2.3988C1.25341 3.54419 0.473385 5.00351 0.157372 6.59221C-0.158641 8.18092 0.0035486 9.82765 0.62343 11.3242C1.24331 12.8207 2.29305 14.0998 3.63988 14.9997C4.98672 15.8997 6.57017 16.38 8.19 16.38C10.2186 16.38 12.0834 15.6366 13.5198 14.4018L13.86 14.7546V15.75L20.16 22.0374L22.0374 20.16L15.75 13.86ZM8.19 13.86C5.0526 13.86 2.52 11.3274 2.52 8.19C2.52 5.0526 5.0526 2.52 8.19 2.52C11.3274 2.52 13.86 5.0526 13.86 8.19C13.86 11.3274 11.3274 13.86 8.19 13.86Z"
+                        fill="#656565"
+                      />
+                    </svg>
+                  </span>
+                </form>
+              </div>
+            </div>
+
+            <!--User/Shop Icons-->
+            <div class="right-icons">
+              <!-- Account Icon Div -->
+              <div class="d-flex">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                >
+                  <path
+                    d="M16.96 10.6004C16.96 11.7249 16.5133 12.8033 15.7181 13.5985C14.923 14.3936 13.8445 14.8404 12.72 14.8404C11.5955 14.8404 10.517 14.3936 9.72185 13.5985C8.92669 12.8033 8.47998 11.7249 8.47998 10.6004C8.47998 9.47583 8.92669 8.39737 9.72185 7.60222C10.517 6.80706 11.5955 6.36035 12.72 6.36035C13.8445 6.36035 14.923 6.80706 15.7181 7.60222C16.5133 8.39737 16.96 9.47583 16.96 10.6004Z"
+                    fill="black"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.2876 23.3116C6.63413 23.0848 2.12012 18.4293 2.12012 12.7201C2.12012 6.86574 6.86574 2.12012 12.7201 2.12012C18.5745 2.12012 23.3201 6.86574 23.3201 12.7201C23.3201 18.5745 18.5745 23.3201 12.7201 23.3201C12.6717 23.3204 12.6233 23.3204 12.5749 23.3201C12.479 23.3201 12.383 23.3169 12.2876 23.3116ZM5.9181 19.4087C5.83884 19.1811 5.81187 18.9386 5.83917 18.6991C5.86647 18.4597 5.94736 18.2295 6.07581 18.0256C6.20427 17.8216 6.377 17.6493 6.58119 17.5213C6.78538 17.3932 7.01578 17.3129 7.25529 17.2861C11.3872 16.8287 14.0785 16.87 18.1902 17.2956C18.4301 17.3206 18.661 17.4 18.8656 17.5277C19.0701 17.6554 19.2427 17.8281 19.3704 18.0327C19.4981 18.2372 19.5774 18.4682 19.6023 18.7081C19.6272 18.9479 19.5971 19.1902 19.5142 19.4167C21.2764 17.6337 22.2633 15.227 22.2601 12.7201C22.2601 7.45139 17.9888 3.18012 12.7201 3.18012C7.45139 3.18012 3.18012 7.45139 3.18012 12.7201C3.18012 15.3256 4.22475 17.6873 5.9181 19.4087Z"
+                    fill="black"
+                  />
+                </svg>
+                <span class="account-span">Account</span>
+              </div>
+              <!-- Cart Icon Div -->
+              <div class="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="25"
+                  viewBox="0 0 19 25"
+                  fill="none"
+                >
+                  <path
+                    d="M2.55559 24.5102C1.95299 24.5102 1.44995 24.3084 1.04647 23.905C0.642118 23.5006 0.439941 22.9971 0.439941 22.3945V8.28583C0.439941 7.68323 0.642118 7.18019 1.04647 6.77671C1.44995 6.37235 1.95299 6.17018 2.55559 6.17018H5.02494V5.51518C5.02494 4.24186 5.47078 3.15936 6.36245 2.26769C7.25413 1.37601 8.33662 0.930176 9.60994 0.930176C10.8833 0.930176 11.9658 1.37601 12.8574 2.26769C13.7491 3.15936 14.1949 4.24186 14.1949 5.51518V6.17018H16.6643C17.2669 6.17018 17.7699 6.37235 18.1734 6.77671C18.5778 7.18019 18.7799 7.68323 18.7799 8.28583V22.3945C18.7799 22.9971 18.5782 23.5002 18.1747 23.9036C17.7704 24.308 17.2669 24.5102 16.6643 24.5102H2.55559ZM2.55559 23.2002H16.6643C16.8652 23.2002 17.0499 23.1163 17.2184 22.9487C17.3861 22.7801 17.4699 22.5954 17.4699 22.3945V8.28583C17.4699 8.08496 17.3861 7.90025 17.2184 7.7317C17.0499 7.56402 16.8652 7.48018 16.6643 7.48018H14.1949V10.7552C14.1949 10.9412 14.1325 11.0971 14.0076 11.2228C13.8819 11.3477 13.726 11.4102 13.5399 11.4102C13.3539 11.4102 13.198 11.3477 13.0723 11.2228C12.9474 11.0971 12.8849 10.9412 12.8849 10.7552V7.48018H6.33494V10.7552C6.33494 10.9412 6.2725 11.0971 6.14761 11.2228C6.02185 11.3477 5.86596 11.4102 5.67994 11.4102C5.49392 11.4102 5.33803 11.3477 5.21227 11.2228C5.08738 11.0971 5.02494 10.9412 5.02494 10.7552V7.48018H2.55559C2.35472 7.48018 2.17001 7.56402 2.00146 7.7317C1.83378 7.90025 1.74994 8.08496 1.74994 8.28583V22.3945C1.74994 22.5954 1.83378 22.7801 2.00146 22.9487C2.17001 23.1163 2.35472 23.2002 2.55559 23.2002ZM6.33494 6.17018H12.8849V5.51518C12.8849 4.59294 12.5697 3.81654 11.9391 3.186C11.3086 2.55545 10.5322 2.24018 9.60994 2.24018C8.6877 2.24018 7.91131 2.55545 7.28076 3.186C6.65022 3.81654 6.33494 4.59294 6.33494 5.51518V6.17018Z"
+                    fill="black"
+                  />
+                </svg>
+                <span class="account-span">Cart</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Tab Nav -->
+        <ul class="Tab-Nav">
+          <li>Brands</li>
+          <li>Face serums</li>
+          <li>Body washes</li>
+          <li>Toners and hydrators</li>
+          <li>Body scrubs</li>
+          <li>Sunscreens</li>
+          <li>Face moisturizers and creams</li>
+          <li>Exfoliants</li>
+          <li>Cleansing oils and balms</li>
+        </ul>
+      </div>
+    </div>
+    <main>
+      <ul class="nav nav-underline gap-2 p-2">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"
+            >Cart Summary</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black active" href="#">Delivery Address</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black active" href="#">Delivery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" href="#">Payment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" href="#">Review</a>
+        </li>
+      </ul>
+        <div>
+            <p style="margin-bottom: 2px;">Order Summary</p>
+         <div class="d-flex mx-auto" style="border: 1px solid black; flex-direction: column; width: 95vw; padding: 1px 10px 0px 10px; font-family: Lora;
+         font-size: 14px;
+         font-weight: 500;
+         " >
+            <div class="d-flex" style="justify-content: space-between; margin-top: 5px;">
+                <p >Item total(1 item)</p>
+                <p class="d-flex" style="font-weight: bolder;">
+                    <svg style="margin-top:3px;                   font-size: 13px; " width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 4.55672H1.2956V0.669922H2.5912L4.80668 4.55672H7.7736V0.669922H9.0692V4.55672H10.3648V5.85232H9.0692V7.14792H10.3648V8.44352H9.0692V12.3303H7.7736L5.55165 8.44352H2.5912V12.3303H1.2956V8.44352H0V7.14792H1.2956V5.85232H0V4.55672ZM2.5912 4.55672H3.32321L2.5912 3.28056V4.55672ZM2.5912 5.85232V7.14792H4.80668L4.06818 5.85232H2.5912ZM7.7736 9.73912V8.44352H7.02863L7.7736 9.73912ZM5.54517 5.85232L6.29014 7.14792H7.7736V5.85232H5.54517Z" fill="black"/>
+                        </svg>
+                    17,000</p>
+            </div>
+            <div class="d-flex" style="justify-content: space-between">
+                <p>Delivery fees</p>
+                <p class="d-flex" style="font-weight: bolder; margin-right: 0.45rem;">
+                    <svg style="margin-top:6.5px; font-size:13px; margin-top:4px;" width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 4.55672H1.2956V0.669922H2.5912L4.80668 4.55672H7.7736V0.669922H9.0692V4.55672H10.3648V5.85232H9.0692V7.14792H10.3648V8.44352H9.0692V12.3303H7.7736L5.55165 8.44352H2.5912V12.3303H1.2956V8.44352H0V7.14792H1.2956V5.85232H0V4.55672ZM2.5912 4.55672H3.32321L2.5912 3.28056V4.55672ZM2.5912 5.85232V7.14792H4.80668L4.06818 5.85232H2.5912ZM7.7736 9.73912V8.44352H7.02863L7.7736 9.73912ZM5.54517 5.85232L6.29014 7.14792H7.7736V5.85232H5.54517Z" fill="black"/>
+                        </svg>
+                    1,000</p>
+            </div>
+            <div class="d-flex" style="justify-content: space-between">
+                <p>Total</p>
+                <p class="d-flex" style="font-weight: bolder;">
+                    <svg style="margin-top:3.5px; font-size:13px;" width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 4.55672H1.2956V0.669922H2.5912L4.80668 4.55672H7.7736V0.669922H9.0692V4.55672H10.3648V5.85232H9.0692V7.14792H10.3648V8.44352H9.0692V12.3303H7.7736L5.55165 8.44352H2.5912V12.3303H1.2956V8.44352H0V7.14792H1.2956V5.85232H0V4.55672ZM2.5912 4.55672H3.32321L2.5912 3.28056V4.55672ZM2.5912 5.85232V7.14792H4.80668L4.06818 5.85232H2.5912ZM7.7736 9.73912V8.44352H7.02863L7.7736 9.73912ZM5.54517 5.85232L6.29014 7.14792H7.7736V5.85232H5.54517Z" fill="black"/>
+                        </svg>
+                    18,000</p>
+            </div>
+       
+         </div>
+        </div>
+        <div>
+            <div class="d-flex justify-content-space-between" style="gap: 14.5rem; margin-top: 10px; ">
+                <p style="margin-bottom: 5px; font-family: Lora;
+                font-size: 14px;
+                font-weight: 600;
+                ">Delivery Address</p>
+                <p style="margin-bottom: -10px;"><a href="#" class="link-underline-primary" >Edit</a></p>
+            </div>
+         <div style="border: 1px solid black; flex-direction: column; width: 95vw; padding: 1px 10px 0px 10px; gap: 0rem;" >
+            <div style=" line-height: 0.5; padding-top: 10px; font-family: Lora;
+            font-size: 14px;
+            font-weight: 400;
+            ">
+                <p>No. 14 James Udo Street Off Eket Oron RD.</p>
+                <p>Akwa-Ibom</p>
+                <p>Eket</p>
+            </div>
+         </div>
+        </div>
+        <div>
+            <div class="d-flex justify-content-space-between" style="gap: 17.5rem; margin-top: 10px; ">
+                <p style="margin-bottom: 5px; font-family: Lora;
+                font-size: 14px;
+                font-weight: 600;">Delivery </p>
+                <p style="margin-bottom: -10px;"><a href="#" class="link-underline-primary" >Edit</a></p>
+            </div>
+            <div class="d-flex mx-auto" style="flex-direction: column; width: 95vw; padding: 1px 5px 0px 5px;" >
+                <div class="d-flex" style="justify-content: space-between">
+                    <div style="font-weight: bolder;">
+                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.7791 14.0937H22.0688C22.2367 14.0937 22.3876 14.0149 22.4827 13.8775C22.5992 13.7091 22.6144 13.4755 22.5244 13.2364L22.5056 13.1865L22.4743 13.1434C22.4708 13.1386 22.1223 12.6586 21.7644 12.1849C21.5526 11.9045 21.3784 11.6804 21.2466 11.5186C21.0025 11.2191 20.8755 11.0752 20.6581 11.0752H19.7791C19.5751 11.0752 19.3892 11.1987 19.2819 11.4057C19.2132 11.5382 19.1769 11.6983 19.1769 11.8688V13.3001C19.1769 13.4706 19.2132 13.6307 19.2819 13.7632C19.3892 13.9701 19.5751 14.0937 19.7791 14.0937ZM19.9689 13.3001V11.8688C19.9689 11.8682 19.9689 11.8677 19.9689 11.8672H20.5061C20.7011 12.0893 21.1668 12.7003 21.6091 13.3017H19.9689C19.9689 13.3012 19.9689 13.3006 19.9689 13.3001ZM3.27116 10.3135L5.10882 10.3135C5.32751 10.3135 5.50482 10.1362 5.50482 9.9175C5.50482 9.69879 5.32753 9.5215 5.10882 9.5215L3.27116 9.52148C3.05247 9.52148 2.87516 9.69879 2.87516 9.91748C2.87516 10.1362 3.05245 10.3135 3.27116 10.3135ZM5.50482 12.0111C5.50482 11.7924 5.32753 11.6151 5.10882 11.6151L1.49793 11.6151C1.27924 11.6151 1.10193 11.7924 1.10193 12.0111C1.10193 12.2298 1.27922 12.4071 1.49793 12.4071L5.10882 12.4071C5.32751 12.4071 5.50482 12.2298 5.50482 12.0111ZM5.50482 14.1047C5.50482 13.886 5.32753 13.7087 5.10882 13.7087L3.27116 13.7087C3.05247 13.7087 2.87516 13.886 2.87516 14.1047C2.87516 14.3234 3.05245 14.5007 3.27116 14.5007L5.10882 14.5007C5.32751 14.5007 5.50482 14.3234 5.50482 14.1047Z" fill="black"/>
+                            <path d="M9.56273 17.914C9.86988 17.914 10.1189 17.665 10.1189 17.3579C10.1189 17.0508 9.86988 16.8018 9.56273 16.8018C9.25559 16.8018 9.00659 17.0508 9.00659 17.3579C9.00659 17.665 9.25559 17.914 9.56273 17.914Z" fill="black"/>
+                            <path d="M21.133 17.914C21.4402 17.914 21.6892 17.6651 21.6892 17.3579C21.6892 17.0508 21.4402 16.8018 21.133 16.8018C20.8259 16.8018 20.5769 17.0508 20.5769 17.3579C20.5769 17.6651 20.8259 17.914 21.133 17.914Z" fill="black"/>
+                            <path d="M24.9325 16.0264C24.7434 15.8917 24.5012 15.8156 24.2478 15.8105V13.167C24.2478 12.9882 24.1706 12.7598 24.0601 12.6116L21.8865 9.69808C21.7523 9.51822 21.4921 9.3926 21.2538 9.3926H18.5157V8.04409C18.5157 7.70154 18.2456 7.42285 17.9135 7.42285H6.53186C6.1998 7.42285 5.92966 7.70154 5.92966 8.04409V15.8105C5.67625 15.8156 5.43402 15.8917 5.24496 16.0264C5.01202 16.1925 4.87842 16.4352 4.87842 16.6924V16.8709C4.87842 17.128 5.01202 17.3708 5.24497 17.5368C5.44074 17.6764 5.6935 17.7533 5.9567 17.7533H7.99958C8.17655 18.4516 8.81029 18.9698 9.56284 18.9698C10.3154 18.9698 10.9491 18.4516 11.1261 17.7533H19.5697C19.7467 18.4516 20.3805 18.9698 21.133 18.9698C21.8856 18.9698 22.5193 18.4516 22.6963 17.7533H24.2207C24.4839 17.7533 24.7367 17.6764 24.9325 17.5368C25.1654 17.3708 25.299 17.128 25.299 16.8709V16.6924C25.299 16.4352 25.1654 16.1925 24.9325 16.0264ZM21.2477 10.1846C21.2529 10.1858 21.2604 10.1887 21.2666 10.1916L23.4245 13.0841C23.4363 13.1022 23.4529 13.1488 23.4558 13.1714V15.81H22.3559H21.5873C21.4432 15.7676 21.2907 15.7448 21.133 15.7448C20.9753 15.7448 20.8229 15.7676 20.6788 15.81H19.9424L18.5157 15.8075V10.1846L21.2477 10.1846ZM10.9872 16.602H19.7087C19.6488 16.7145 19.6018 16.8349 19.5697 16.9613H11.1261C11.0941 16.8349 11.0471 16.7145 10.9872 16.602ZM6.72166 8.21485H17.7237V9.96099V15.8013H10.7794V15.81H10.0171C9.87297 15.7676 9.72053 15.7448 9.56284 15.7448C9.40515 15.7448 9.25272 15.7676 9.10857 15.81H8.34632V15.8013H6.72166V8.21485ZM5.67042 16.8605V16.7028C5.69228 16.6697 5.79443 16.602 5.95671 16.602H8.13851C8.07859 16.7145 8.03159 16.8349 7.99958 16.9613H5.95671C5.79441 16.9613 5.69227 16.8936 5.67042 16.8605ZM9.56284 18.1778C9.1104 18.1778 8.74232 17.8097 8.74232 17.3573C8.74232 16.9048 9.1104 16.5368 9.56284 16.5368C9.67498 16.5368 9.78191 16.5594 9.87936 16.6003V16.602H9.8834C10.177 16.7271 10.3834 17.0185 10.3834 17.3573C10.3834 17.8097 10.0153 18.1778 9.56284 18.1778ZM21.133 18.1778C20.6806 18.1778 20.3125 17.8097 20.3125 17.3573C20.3125 16.9048 20.6806 16.5368 21.133 16.5368C21.5855 16.5368 21.9536 16.9048 21.9536 17.3573C21.9536 17.8097 21.5855 18.1778 21.133 18.1778ZM24.507 16.8605C24.4852 16.8936 24.383 16.9613 24.2207 16.9613H22.6963C22.6643 16.8349 22.6173 16.7145 22.5574 16.602H23.635C23.642 16.6021 23.6499 16.6022 23.6585 16.6022C23.6648 16.6022 23.6715 16.6021 23.6786 16.602H24.2207C24.383 16.602 24.4852 16.6697 24.507 16.7028L24.507 16.8605Z" fill="black"/>
+                        </svg>
+                        Door Delivery (5-7 working days)     
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          
+                        </label>
+                    </div>
+                </div>
+                    <p style="font-family: Lora;
+                    font-size: 14px;
+                    font-weight: 400;
+                    ">Door delivery within Port Harcourt (price from #2,000) </p>
+                    <p style="font-family: Lora;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-top: -1rem;
+                    ">Door delivery outside Port Harcourt (price from #3,000) </p>
+             </div>
+            <div class="d-flex mx-auto" style="flex-direction: column; width: 95vw; padding: 1px 5px 0px 5px;" >
+                <div class="d-flex" style="justify-content: space-between">
+                    <div style="font-weight: bolder;">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="17.8176" height="17.8176" fill="url(#pattern0)"/>
+                            <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_259_3717" transform="scale(0.00195312)"/>
+                            </pattern>
+                            <image id="image0_259_3717" width="512" height="512" xlink:href="data:image/png;base64,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"/>
+                            </defs>
+                            </svg> 
+                        Pickup (5-7 working days)     
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          
+                        </label>
+                    </div>
+                </div>
+                    <p style="font-family: Lora;
+                    font-size: 14px;
+                    font-weight: 400;
+                    ">Door delivery within Port Harcourt (price from #2,000) </p>
+                    <p style="font-family: Lora;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-top: -1rem;
+                    ">Door delivery outside Port Harcourt (price from #3,000) </p>
+            </div>
+            <div class="d-flex mx-auto" style="flex-direction: column; width: 95vw; padding: 1px 5px 0px 5px;" >
+                <div class="d-flex" style="justify-content: space-between">
+                    <div style="font-weight: bolder;">
+                        Stockpile    
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          
+                        </label>
+                    </div>
+            </div>
+        <button type="button" class="btn" style="background-color: #908cb8; margin-top: 10px;">
+          Proceed to Payment
+        </button>
+      </form>
+    </main>
+    <!--Boostrap JS CDN Link-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
