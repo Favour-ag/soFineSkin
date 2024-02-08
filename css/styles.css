@@ -297,6 +297,9 @@ footer {
   .socials-right {
     display: none;
   }
+  .nav-form {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
