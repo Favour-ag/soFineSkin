@@ -21,18 +21,15 @@
       }
       
       .productImage-div img:nth-child(1) {
-        /* background-color: blue; */
         width: 93%;
         height: 170px;
       }
       .productImage-div img:nth-child(2) {
-        /* background-color: red; */
         position: absolute;
         top: 5rem;
         left: 3.5rem;
       }
       .productImage-div img:nth-child(3) {
-        /* background-color: yellow; */
         position: absolute;
         top: -1.5rem;
         left: -2.5rem;
@@ -56,6 +53,39 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;
+      }
+     
+      @media (min-width: 768px) {
+        .productImage-div img:nth-child(2) {
+        position: absolute;
+        width: 320.29px;
+        height: 300.42px;     
+        top: 12rem;   
+      }
+      .productImage-div img:nth-child(3) {
+        position: absolute;
+        left: -6rem;
+        top: 2rem;
+        width: 620px;
+      }
+      .product-item-div {
+        width: 60%;
+        margin-left: 21rem;
+        padding-left: 2rem;
+        padding-right: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        /* background-color: red; */
+      }
+      #btn button{
+        width: 40%;
+        margin: auto;
+        margin-bottom: 2rem;
+      }
+      .p-description-text{
+        text-wrap: wrap;
+        padding-right: 8rem;
+      }
       }
     </style>
   </head>
@@ -231,29 +261,28 @@
                     </div>
                   </div>
                 </div>
-                <!-- Form  -->
-                <form class="nav-form">
+              
+                 <!-- Search Input  -->
+                 <div  class="input-group" id="search-input">
+                  <span class="input-group-text"><svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.75 13.86H14.7546L14.4018 13.5198C15.6793 12.0381 16.3814 10.1464 16.38 8.19C16.38 6.57017 15.8997 4.98672 14.9997 3.63988C14.0998 2.29305 12.8207 1.24331 11.3242 0.62343C9.82765 0.0035486 8.18092 -0.158641 6.59221 0.157372C5.00351 0.473385 3.54419 1.25341 2.3988 2.3988C1.25341 3.54419 0.473385 5.00351 0.157372 6.59221C-0.158641 8.18092 0.0035486 9.82765 0.62343 11.3242C1.24331 12.8207 2.29305 14.0998 3.63988 14.9997C4.98672 15.8997 6.57017 16.38 8.19 16.38C10.2186 16.38 12.0834 15.6366 13.5198 14.4018L13.86 14.7546V15.75L20.16 22.0374L22.0374 20.16L15.75 13.86ZM8.19 13.86C5.0526 13.86 2.52 11.3274 2.52 8.19C2.52 5.0526 5.0526 2.52 8.19 2.52C11.3274 2.52 13.86 5.0526 13.86 8.19C13.86 11.3274 11.3274 13.86 8.19 13.86Z"
+                      fill="#656565"
+                    />
+                  </svg></span>
                   <input
                     class="form-control me-2"
                     type="search"
                     placeholder="Search for a product or brand"
                     aria-label="Search"
                   />
-                  <span>
-                    <svg
-                      width="23"
-                      height="23"
-                      viewBox="0 0 23 23"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15.75 13.86H14.7546L14.4018 13.5198C15.6793 12.0381 16.3814 10.1464 16.38 8.19C16.38 6.57017 15.8997 4.98672 14.9997 3.63988C14.0998 2.29305 12.8207 1.24331 11.3242 0.62343C9.82765 0.0035486 8.18092 -0.158641 6.59221 0.157372C5.00351 0.473385 3.54419 1.25341 2.3988 2.3988C1.25341 3.54419 0.473385 5.00351 0.157372 6.59221C-0.158641 8.18092 0.0035486 9.82765 0.62343 11.3242C1.24331 12.8207 2.29305 14.0998 3.63988 14.9997C4.98672 15.8997 6.57017 16.38 8.19 16.38C10.2186 16.38 12.0834 15.6366 13.5198 14.4018L13.86 14.7546V15.75L20.16 22.0374L22.0374 20.16L15.75 13.86ZM8.19 13.86C5.0526 13.86 2.52 11.3274 2.52 8.19C2.52 5.0526 5.0526 2.52 8.19 2.52C11.3274 2.52 13.86 5.0526 13.86 8.19C13.86 11.3274 11.3274 13.86 8.19 13.86Z"
-                        fill="#656565"
-                      />
-                    </svg>
-                  </span>
-                </form>
+                </div>
               </div>
             </div>
 
@@ -315,8 +344,9 @@
       </div>
     </div>
     <main>
+      <p class="d-none d-md-block">Home / Our Products / Clean it zero </p>
       <div>
-        <div class="productLike">
+        <div class="productLike d-lg-none">
           <svg
             width="20"
             height="19"
@@ -335,7 +365,8 @@
           <img
             src="./productImages/Rectangle 50.png"
             alt=""
-            class="rounded mx-auto d-block"
+            class="rounded mx-auto d-flex d-md-none"
+            
           />
           <img
             src="./productImages/WhatsApp Image 2024-01-13 at 14.18 5.png"
@@ -348,12 +379,14 @@
           />
         </div>
       </div>
-      <div>
-       <div>
+      <div class="product-item-div">
+       <div class="">
         <p style="font-family: Garamond;
-        font-size: 16px;
+        font-size: 28px;
         margin-top: 0.8rem;
         padding-left: 1rem;
+        font-family: Garamond;
+        font-weight: bold;
         ">Clean It Zero</p>
         <svg
           width="91"
@@ -385,8 +418,15 @@
             fill="#F8BD00"
           />
         </svg>
+        <hr class="line d-none d-lg-block w-100">
        </div>
-          <p class="p-description-text">
+          <p class="p-description-text" style="font-family: Lora;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 0em;
+          text-align: left;
+          ">
             The Clean It Zero line from Banila Co. is a collection of cleansing
             balms and other skincare products known for their gentle yet effective
             cleansing power. The hero product is the Clean It Zero Original
@@ -418,56 +458,82 @@
           <div style="width: 33px; height: 33px; border: 1px solid black; border-radius: 100%; display: flex;justify-content: center; align-items: center;">-</div>
         </div>
         </div>
-        <hr style="width: 90%; margin: auto;">
-        <div style="display: flex; align-items: center; justify-content:space-between; margin-left: 16px; margin-right: 20px; margin-top: 10px;">
-          <p style="font-family: Lora;
-          font-size: 14px;
-          text-align: left;
-          "> How to Use</p>
-          <svg
-            width="12"
-            height="6"
-            viewBox="0 0 12 6"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.51563 5.59437C5.78314 5.86188 6.21686 5.86188 6.48437 5.59437L10.8437 1.23506C11.1112 0.967547 11.1112 0.53383 10.8437 0.266321C10.5762 -0.00118856 10.1425 -0.00118857 9.87494 0.266321L6 4.14126L2.12506 0.26632C1.85755 -0.00118894 1.42383 -0.00118896 1.15632 0.26632C0.888811 0.533829 0.888811 0.967547 1.15632 1.23506L5.51563 5.59437ZM5.315 4L5.315 5.11L6.685 5.11L6.685 4L5.315 4Z"
-              fill="#9A9A9A"
-            />
-          </svg>
+        <hr class="d-md-none" style="width: 90%; margin: auto;">
+
+        <!-- Button Large Screen -->
+        <div class="d-none d-md-flex d-md-flex gap-2 gap-md-0 mx-auto mx-md-0" style="width: 50%;" id="btn">
+          <button type="button" class="btn"><a href="./cartPage.html" style="text-decoration: none; color: black;">Buy Now</a></button>
+          <button class="btn" type="button"><a href="./cartPage.html" style="text-decoration: none; color: white;">Add to Cart</a></button>
         </div>
-        
-        <hr style="width: 90%; margin: auto;">
-        <div style="display: flex; align-items: center; justify-content:space-between; margin-left: 16px; margin-right: 20px; margin-top: 10px;">
-          <p style="font-family: Lora;
-          font-size: 14px;
-          text-align: left;
-          ">Ingredients</p>
-          <svg
-            width="12"
-            height="6"
-            viewBox="0 0 12 6"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.51563 5.59437C5.78314 5.86188 6.21686 5.86188 6.48437 5.59437L10.8437 1.23506C11.1112 0.967547 11.1112 0.53383 10.8437 0.266321C10.5762 -0.00118856 10.1425 -0.00118857 9.87494 0.266321L6 4.14126L2.12506 0.26632C1.85755 -0.00118894 1.42383 -0.00118896 1.15632 0.26632C0.888811 0.533829 0.888811 0.967547 1.15632 1.23506L5.51563 5.59437ZM5.315 4L5.315 5.11L6.685 5.11L6.685 4L5.315 4Z"
-              fill="#9A9A9A"
-            />
-          </svg>
+        <div class="d-md-flex gap-md-5 ps-md-8 ">
+          <div style="display: flex; align-items: center; justify-content:space-between; margin-left: 16px; margin-right: 20px; margin-top: 10px;">
+            <p style="font-family: Lora;
+            font-size: 14px;
+            text-align: left;
+            "> How to Use</p>
+            <svg
+              width="12"
+              height="6"
+              viewBox="0 0 12 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="d-md-none"
+            >
+              <path
+                d="M5.51563 5.59437C5.78314 5.86188 6.21686 5.86188 6.48437 5.59437L10.8437 1.23506C11.1112 0.967547 11.1112 0.53383 10.8437 0.266321C10.5762 -0.00118856 10.1425 -0.00118857 9.87494 0.266321L6 4.14126L2.12506 0.26632C1.85755 -0.00118894 1.42383 -0.00118896 1.15632 0.26632C0.888811 0.533829 0.888811 0.967547 1.15632 1.23506L5.51563 5.59437ZM5.315 4L5.315 5.11L6.685 5.11L6.685 4L5.315 4Z"
+                fill="#9A9A9A"
+              />
+            </svg>
+          </div>
+          
+          <hr class="d-md-none" style="width: 90%; margin: auto;">
+          <div style="display: flex; align-items: center; justify-content:space-between; margin-left: 16px; margin-right: 20px; margin-top: 10px;">
+            <p style="font-family: Lora;
+            font-size: 14px;
+            text-align: left;
+            ">Ingredients</p>
+            <svg
+              width="12"
+              height="6"
+              viewBox="0 0 12 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="d-md-none"
+            >
+              <path
+                d="M5.51563 5.59437C5.78314 5.86188 6.21686 5.86188 6.48437 5.59437L10.8437 1.23506C11.1112 0.967547 11.1112 0.53383 10.8437 0.266321C10.5762 -0.00118856 10.1425 -0.00118857 9.87494 0.266321L6 4.14126L2.12506 0.26632C1.85755 -0.00118894 1.42383 -0.00118896 1.15632 0.26632C0.888811 0.533829 0.888811 0.967547 1.15632 1.23506L5.51563 5.59437ZM5.315 4L5.315 5.11L6.685 5.11L6.685 4L5.315 4Z"
+                fill="#9A9A9A"
+              />
+            </svg>
+          </div>
         </div>
-        <hr style="width: 90%; margin: auto; margin-bottom: 1rem;">
+        <hr style="margin-top: -0.8rem; width: 230px; margin-left: 10px;">
+        <hr class="d-block d-md-none" style="width: 90%; margin: auto; margin-bottom: 1rem;">
         
-        <div class="d-grid gap-2 col-10 mx-auto" style="width: 90%;">
-          <button type="button" class="btn">Buy Now</button>
-          <button class="btn" type="button">Add to Cart</button>
+        <!-- Button Div small screen-->
+        <div class="d-grid d-md-none d-md-flex gap-2 gap-md-0 mx-auto mx-md-0" style="width: 90%;" id="btn">
+          <button type="button" class="btn"><a href="./cartPage.html" style="text-decoration: none; color: black;">Buy Now</a></button>
+          <button class="btn" type="button"><a href="./cartPage.html" style="text-decoration: none; color: white;">Add to Cart</a></button>
         </div>
       </div>
       <div>
-        <div class="container place-items-center">
-          <p>You Might Also Like</p>
-          <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 row-cols-lg-5  pe-3">
+        <!-- Apply Products in the correct other div -->
+        <div class="d-none d-md-block" style="margin-top: -2.5rem;">
+          <p>Apply products in the correct order</p>
+          <ul>
+            <li>Morning</li>
+            <li>Cleanse: Wash your face with a gentle cleanser to remove oil and dirt.</li>
+          <li>Tone: Use a toner to balance your skin's pH and remove any leftover residue. (Optional)</li>
+          <li>Serum: Apply a lightweight serum with targeted ingredients for your concerns, like Vitamin C for brightening or retinol for anti-aging.</li>
+          <li>Moisturizer: Apply a moisturizer with SPF to protect your skin from the sun.</li>
+          <li>Sunscreen: Apply a broad-spectrum sunscreen with SPF 30 or higher, even on cloudy days</li>
+          </li>
+          
+        </div>
+        <!-- You might also like div -->
+        <div class="container place-items-center" style="margin-top: 25px;">
+          <p >You Might Also Like</p>
+          <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 row-cols-lg-5  pe-3 pe-md-0 gap-0 gap-md-5">
             <div class="col">
               <div class="product-div-item">
                 <img
@@ -506,7 +572,7 @@
                       />
                     </svg>
   
-                    <span class="">4.5</span>
+                    <span>4.5</span>
                   </p>
                   <p class="product-desc">All in one cream</p>
                   <p class="product-price">Price.<span>3 Left</span></p>
@@ -518,7 +584,8 @@
                 <img
                   src="./productImages/WhatsApp Image 2024-01-13 at 14.18 19.png"
                   alt="Product1"
-                  style="width: 30px;"
+                  style="width: 30px; margin-left: 3rem;"
+                  
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -63,7 +63,6 @@ svg {
 .enquiries-div {
   font-size: 16px;
   margin-top: 3rem;
-  /* padding: 0; */
 }
 .contact-info {
   margin-top: 0.5rem;
@@ -88,7 +87,6 @@ svg {
   justify-items: center;
   padding: 1rem;
   gap: 12px;
-  /* background-color: red; */
 }
 
 main {
@@ -103,11 +101,9 @@ main {
   padding-right: 1rem;
   padding-left: 1.5rem;
   font-size: 2.2rem;
-  /* font-family: Garamond; */
 }
 
 .ellipse-div {
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,7 +116,6 @@ main {
 
 .ellipse-div > div {
   display: grid;
-  /* flex-direction: column; */
 }
 
 .face {
@@ -133,8 +128,6 @@ main {
   margin-left: -14px;
 }
 
-/* .recommend-div {
-} */
 .line {
   border: 2px solid black;
   width: 85%;
@@ -148,7 +141,6 @@ main {
 }
 
 .filter {
-  /* background-color: blue; */
   text-align: left;
   position: relative;
   right: 4rem;
@@ -228,7 +220,6 @@ footer {
 }
 
 .footer-div-items {
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -272,15 +263,15 @@ footer {
   line-height: 1px;
   width: 100%;
   height: 100%;
-  /* background-color: yellow; */
 }
 
 /* MEDIA QUERY */
+/*SMALL SCREEN / MOBILE*/
 @media (max-width: 576px) {
   .account-span {
     display: none;
   }
-  #nav-input {
+  #search-input {
     display: none;
   }
   .Tab-Nav {
@@ -302,6 +293,7 @@ footer {
   }
 }
 
+/* LARGE SCREEN */
 @media (min-width: 768px) {
   main {
     margin-top: 9rem;
@@ -309,8 +301,9 @@ footer {
   .search-icon {
     display: none;
   }
-  #nav-input {
-    width: 60%;
+  #search-input {
+    width: 700px;
+    height: 50px;
   }
   .navbar-nav {
     display: none;
@@ -373,10 +366,6 @@ footer {
     gap: 10rem;
     margin-left: 5rem;
     margin-right: 5rem;
-  }
-  .footer-div-items-left {
-    /* margin-left: 5rem; */
-    /* background-color: red; */
   }
 
   footer img {
