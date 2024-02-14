@@ -43,6 +43,13 @@
         justify-content: space-between;
         align-items: center;
       }
+
+      @media (min-width: 768px) {
+        /* .shopping-cart-summary-div {
+          background-color: green;
+          width: 400px;
+        } */
+      }
     </style>
   </head>
   <body>
@@ -323,14 +330,22 @@
           <p style="font-family: Lora; font-size: 13px; font-weight: 600">
             My Shopping Cart Summary
           </p>
-          <hr style="width: 100%; outline: auto" />
-          <p style="font-family: Lora; font-size: 13px; font-weight: 600">
+          <hr class="d-md-none" style="width: 100%; outline: auto" />
+          <p
+            class="d-md-none"
+            style="font-family: Lora; font-size: 13px; font-weight: 600"
+          >
             Subtotal (1 item)
           </p>
-          <hr style="width: 100%; outline: auto" />
+          <hr class="d-md-none" style="width: 100%; outline: auto" />
         </div>
         <div class="shopping-cart-summary-div">
-          <div style="width: 100px; height: 100px">
+          <div class="image-div" style="width: 100px; height: 100px">
+            <img
+              src="./productImages/WhatsApp Image 2024-01-13 at 14.18 5.png"
+              alt=""
+              class="d-none d-md-block"
+            />
             <img
               src="./productImages/WhatsApp Image 2024-01-13 at 14.18 6.png"
               alt="productImage"
@@ -351,7 +366,7 @@
               margin-top: 10px;
             "
           >
-            <p>Clean it Zero</p>
+            <p style="font-size: 24px">Clean it Zero</p>
             <p>Cleansing balm original</p>
             <p style="font-family: Lora; font-size: 13px">
               <svg

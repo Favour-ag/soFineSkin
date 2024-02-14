@@ -34,6 +34,32 @@
         content: "*";
         color: red;
       }
+      /* MEDIA QUERY - LARGE SCREEN */
+      @media (min-width: 768px) {
+        .form-div {
+          display: flex;
+          justify-content: space-around;
+          padding: 3rem;
+          width: 100vw;
+        }
+
+        form {
+          width: 700px;
+        }
+        .summary-div {
+          background-color: #fffade;
+          width: 400px;
+          height: 330px;
+          padding: 1rem;
+          margin-top: 1.5rem;
+        }
+        button a {
+          text-decoration: none;
+          font-family: Lora;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
     </style>
   </head>
   <body>
@@ -289,7 +315,10 @@
         </ul>
       </div>
     </div>
+
+    <!-- Main Section -->
     <main>
+      <!-- Progress Tab -->
       <ul class="nav nav-underline gap-2 p-2">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#"
@@ -309,132 +338,252 @@
           <a class="nav-link text-black" href="#">Review</a>
         </li>
       </ul>
-      <p>Delivery Address</p>
-      <form>
-        <div class="form-group required mb-3">
-          <label for="email" class="form-label">Email address</label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Jennifer04@gmail.com"
-          />
-        </div>
-        <div class="form-group required mb-3">
-          <label for="number" class="form-label">Phone</label>
-          <input
-            type="phone"
-            class="form-control"
-            id="phone"
-            placeholder="07043515589"
-          />
-        </div>
-        <div class="form-group required mb-3">
-          <label for="name" class="form-label">First name</label>
-          <input
-            type="name"
-            class="form-control"
-            id="firstname"
-            aria-describedby="name"
-            placeholder="Jennifer"
-          />
-        </div>
-        <div class="form-group required mb-3">
-          <label for="name" class="form-label">Last name(surname)</label>
-          <input
-            type="name"
-            class="form-control"
-            id="lastname"
-            aria-describedby="name"
-            placeholder="Lopez"
-          />
-        </div>
-        <div class="form-group required mb-3">
-          <label for="name" class="form-label">Street address</label>
-          <input
-            type="name"
-            class="form-control"
-            id="address"
-            aria-describedby="address"
-            placeholder="House number and street name"
-          />
-        </div>
-        <div class="form-group required mb-3">
-          <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select form-select-sm">
-            <option selected>Akwa Ibom</option>
-            <option value="1">Abia</option>
-            <option value="2">Abuja</option>
-            <option value="3">Adamawa</option>
-            <option value="3">Akwa Ibom</option>
-            <option value="3">Anambra</option>
-            <option value="3">Bauchi</option>
-          </select>
-        </div>
-        <div class="form-group required mb-3">
-          <label for="inputState" class="form-label">Town / City</label>
-          <select id="inputState" class="form-select form-select-sm">
-            <option selected>Select a Town/City</option>
-            <option value="1">Abak</option>
-            <option value="2">Eastern</option>
-            <option value="3">Eket</option>
-            <option value="3">Esit-Eket</option>
-            <option value="3">Essien Udim</option>
-            <option value="3">Etim-Ekpo</option>
-            <option value="3">Etinan</option>
-            <option value="3">Ibeno</option>
-          </select>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="flexCheckChecked"
-          />
-          <label class="form-check-label" for="flexCheckChecked">
-            Ship to a different address?
-          </label>
-        </div>
-        <div>
-          <p>Additional information (optional)</p>
-          <div class="form-floating">
-            <textarea
+
+      <!-- Form Div -->
+      <div class="form-div">
+        <form>
+          <p
+            style="
+              font-weight: bold;
+              font-family: Lora;
+              font-size: 32px;
+              font-weight: 600;
+              line-height: 41px;
+              letter-spacing: 0em;
+              text-align: left;
+            "
+          >
+            Delivery Address
+          </p>
+          <div class="form-group required mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              type="email"
               class="form-control"
-              placeholder="Leave a comment here"
-              id="floatingTextarea2"
-              style="height: 200px"
-            ></textarea>
-            <label for="floatingTextarea2">Additional Information</label>
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Jennifer04@gmail.com"
+            />
           </div>
-        </div>
-        <div class="row text-center mt-4">
-          <div class="col">
+          <div class="form-group required mb-3">
+            <label for="number" class="form-label">Phone</label>
+            <input
+              type="phone"
+              class="form-control"
+              id="phone"
+              placeholder="07043515589"
+            />
+          </div>
+          <div class="form-group required mb-3">
+            <label for="name" class="form-label">First name</label>
+            <input
+              type="name"
+              class="form-control"
+              id="firstname"
+              aria-describedby="name"
+              placeholder="Jennifer"
+            />
+          </div>
+          <div class="form-group required mb-3">
+            <label for="name" class="form-label">Last name(surname)</label>
+            <input
+              type="name"
+              class="form-control"
+              id="lastname"
+              aria-describedby="name"
+              placeholder="Lopez"
+            />
+          </div>
+          <div class="form-group required mb-3">
+            <label for="name" class="form-label">Street address</label>
+            <input
+              type="name"
+              class="form-control"
+              id="address"
+              aria-describedby="address"
+              placeholder="House number and street name"
+            />
+          </div>
+          <div class="form-group required mb-3">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select form-select-sm">
+              <option selected>Akwa Ibom</option>
+              <option value="1">Abia</option>
+              <option value="2">Abuja</option>
+              <option value="3">Adamawa</option>
+              <option value="3">Akwa Ibom</option>
+              <option value="3">Anambra</option>
+              <option value="3">Bauchi</option>
+            </select>
+          </div>
+          <div class="form-group required mb-3">
+            <label for="inputState" class="form-label">Town / City</label>
+            <select id="inputState" class="form-select form-select-sm">
+              <option selected>Select a Town/City</option>
+              <option value="1">Abak</option>
+              <option value="2">Eastern</option>
+              <option value="3">Eket</option>
+              <option value="3">Esit-Eket</option>
+              <option value="3">Essien Udim</option>
+              <option value="3">Etim-Ekpo</option>
+              <option value="3">Etinan</option>
+              <option value="3">Ibeno</option>
+            </select>
+          </div>
+          <div class="d-block d-md-none">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                Ship to a different address?
+              </label>
+            </div>
+            <div>
+              <p>Additional information (optional)</p>
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea2"
+                  style="height: 200px"
+                ></textarea>
+                <label for="floatingTextarea2">Additional Information</label>
+              </div>
+            </div>
+            <div class="row text-center mt-4">
+              <div class="col">
+                <button
+                  type="button"
+                  class="btn"
+                  style="outline: 1px solid #908cb8; width: 150px"
+                >
+                  <a href="" style="text-decoration: none; color: black"
+                    >Back</a
+                  >
+                </button>
+              </div>
+              <div class="col">
+                <button
+                  type="button"
+                  class="btn"
+                  style="background-color: #908cb8; width: 150px"
+                >
+                  <a
+                    href="./cartSummaryPage.html"
+                    style="text-decoration: none; color: white"
+                    >Proceed</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <!-- Summary Div -->
+        <div class="summary-div d-none d-md-block">
+          <div class="container place-items-center">
+            <p
+              class="text-center"
+              style="font-family: Lora; font-size: 24px; font-weight: 500"
+            >
+              Order Summary
+            </p>
+            <div class="row">
+              <div class="col">
+                <div style="display: flex; justify-content: space-between">
+                  <p
+                    style="
+                      font-family: Lora;
+                      font-size: 16px;
+                      font-weight: 500;
+                      line-height: 2;
+                    "
+                  >
+                    Subtotal (1 Item)
+                  </p>
+                  <div
+                    style="font-family: Lora; font-size: 20px; font-weight: 700"
+                  >
+                    <svg
+                      style="margin-top: -5px"
+                      width="16"
+                      height="18"
+                      viewBox="0 0 16 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 6H2V0H4L7.42 6H12V0H14V6H16V8H14V10H16V12H14V18H12L8.57 12H4V18H2V12H0V10H2V8H0V6ZM4 6H5.13L4 4.03V6ZM4 8V10H7.42L6.28 8H4ZM12 14V12H10.85L12 14ZM8.56 8L9.71 10H12V8H8.56Z"
+                        fill="black"
+                      />
+                    </svg>
+                    23,000
+                  </div>
+                </div>
+                <div
+                  style="
+                    font-family: Lora;
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: 5px;
+                  "
+                >
+                  <p>Shipping costs are calculated during checkout.</p>
+                  <hr />
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                font-weight: bold;
+                font-size: 20px;
+                font-family: Lora;
+                text-align: right;
+              "
+            >
+              <p>
+                <svg
+                  style="margin-top: -5px"
+                  width="16"
+                  height="18"
+                  viewBox="0 0 16 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 6H2V0H4L7.42 6H12V0H14V6H16V8H14V10H16V12H14V18H12L8.57 12H4V18H2V12H0V10H2V8H0V6ZM4 6H5.13L4 4.03V6ZM4 8V10H7.42L6.28 8H4ZM12 14V12H10.85L12 14ZM8.56 8L9.71 10H12V8H8.56Z"
+                    fill="black"
+                  />
+                </svg>
+                23,000
+              </p>
+            </div>
+          </div>
+          <div class="d-flex gap-2" style="margin-top: 5.5rem">
+            <!-- Button -->
             <button
               type="button"
-              class="btn"
-              style="outline: 1px solid #908cb8; width: 150px"
+              class="btn w-50"
+              style="border: 1px solid #908cb8"
             >
-              <a href="" style="text-decoration: none; color: black">Back</a>
+              <a href="" style="color: black">Back to Cart</a>
             </button>
-          </div>
-          <div class="col">
             <button
               type="button"
-              class="btn"
-              style="background-color: #908cb8; width: 150px"
+              class="btn w-50"
+              style="background-color: #908cb8"
             >
-              <a
-                href="./cartSummaryPage.html"
-                style="text-decoration: none; color: white"
-                >Proceed</a
-              >
+              <a href="" style="color: white">Proceed</a>
             </button>
           </div>
         </div>
-      </form>
+      </div>
     </main>
+
     <!-- Footer -->
     <footer>
       <img src="./images/logo.png" alt="logo" />
