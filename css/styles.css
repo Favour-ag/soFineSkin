@@ -95,12 +95,11 @@ svg {
   padding: 0.1rem;
   border-radius: 30px;
   border: 1px solid black;
-  padding: 0.3rem;
 }
 .nav-search-input-div svg {
   position: relative;
-  top: calc(5%);
-  left: 0.3rem;
+  top: calc(15%);
+  left: 0.4rem;
 }
 
 .nav-search-input-div input {
@@ -109,9 +108,21 @@ svg {
   border: none;
   width: 90%;
   position: relative;
-  left: 0.5rem;
-  background-color: pink;
-  padding: 0.3rem;
+  left: 0.3rem;
+}
+
+.nav-search-input-div input:focus {
+  outline: none;
+  border: none;
+}
+.nav-search-input-div input:active {
+  outline: none;
+  border: none;
+}
+
+.nav-search-input-div input::placeholder {
+  color: #000;
+  text-decoration: none;
 }
 
 main {
