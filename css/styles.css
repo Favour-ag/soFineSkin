@@ -95,7 +95,7 @@ svg {
   padding: 0.1rem;
   border-radius: 30px;
   border: 1px solid black;
-  padding: 0.5rem;
+  padding: 0.3rem;
 }
 .nav-search-input-div svg {
   position: relative;
@@ -109,12 +109,9 @@ svg {
   border: none;
   width: 90%;
   position: relative;
-  left: 0.3rem;
-}
-
-.nav-search-input-div input::placeholder {
-  color: #000;
-  text-decoration: none;
+  left: 0.5rem;
+  background-color: pink;
+  padding: 0.3rem;
 }
 
 main {
