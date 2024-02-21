@@ -89,18 +89,51 @@ svg {
   gap: 12px;
 }
 
+.nav-search-input-div {
+  width: 90%;
+  margin: auto;
+  padding: 0.1rem;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+.nav-search-input-div svg {
+  position: relative;
+  top: calc(15%);
+  left: 0.4rem;
+}
+
+.nav-search-input-div input {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  width: 90%;
+  position: relative;
+  left: 0.3rem;
+}
+.nav-search-input-div input:focus :active {
+  /* background-color: yellow; */
+  outline: none;
+  border: none;
+}
+
+.nav-search-input-div input::placeholder {
+  color: #000;
+  text-decoration: none;
+}
+
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   overflow-x: hidden;
-  margin-top: 6rem;
+  margin-top: 3.5rem;
 }
 .main-paragraph {
   padding-right: 1rem;
   padding-left: 1.5rem;
   font-size: 2.2rem;
+  margin-top: 4rem;
 }
 
 .ellipse-div {

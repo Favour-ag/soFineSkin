@@ -34,6 +34,13 @@
         content: "*";
         color: red;
       }
+
+      /* MEDIA QUERY - SMALL SCREEN */
+      @media (max-width: 576px) {
+        #search-input {
+          display: none;
+        }
+      }
       /* MEDIA QUERY - LARGE SCREEN */
       @media (min-width: 768px) {
         .form-div {
@@ -58,6 +65,13 @@
           font-family: Lora;
           font-size: 12px;
           font-weight: 600;
+        }
+        .search-icon {
+          display: none;
+        }
+        #search-input {
+          width: 700px;
+          height: 50px;
         }
       }
     </style>
@@ -95,7 +109,9 @@
               </svg>
             </div>
             <!--Logo-->
-            <img src="./images/logo.png" alt="" class="logo" />
+            <a href="index.html">
+              <img src="./images/logo.png" alt="" class="logo" />
+            </a>
             <div
               class="offcanvas offcanvas-start w-75 h-50"
               tabindex="-1"
@@ -145,7 +161,7 @@
                     <a
                       class="nav-link mx-lg-2 active"
                       aria-current="page"
-                      href="#"
+                      href="./brandsPage.html"
                       >Brands</a
                     >
                   </li>
@@ -197,7 +213,11 @@
                       fill="black"
                     />
                   </svg>
-                  Login/Sign Up
+                  <a
+                    href="./login.html"
+                    class="link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                    >Login/Sign Up</a
+                  >
                   <div class="contact-info">
                     <p>Contact Us</p>
                     <div class="call-div">
@@ -232,16 +252,10 @@
                     </div>
                   </div>
                 </div>
-                <!-- Form  -->
-                <form class="nav-form">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search for a product or brand"
-                    aria-label="Search"
-                  />
-                  <span>
-                    <svg
+                <!-- Search Input  -->
+                <div class="input-group" id="search-input">
+                  <span class="input-group-text"
+                    ><svg
                       width="23"
                       height="23"
                       viewBox="0 0 23 23"
@@ -251,10 +265,15 @@
                       <path
                         d="M15.75 13.86H14.7546L14.4018 13.5198C15.6793 12.0381 16.3814 10.1464 16.38 8.19C16.38 6.57017 15.8997 4.98672 14.9997 3.63988C14.0998 2.29305 12.8207 1.24331 11.3242 0.62343C9.82765 0.0035486 8.18092 -0.158641 6.59221 0.157372C5.00351 0.473385 3.54419 1.25341 2.3988 2.3988C1.25341 3.54419 0.473385 5.00351 0.157372 6.59221C-0.158641 8.18092 0.0035486 9.82765 0.62343 11.3242C1.24331 12.8207 2.29305 14.0998 3.63988 14.9997C4.98672 15.8997 6.57017 16.38 8.19 16.38C10.2186 16.38 12.0834 15.6366 13.5198 14.4018L13.86 14.7546V15.75L20.16 22.0374L22.0374 20.16L15.75 13.86ZM8.19 13.86C5.0526 13.86 2.52 11.3274 2.52 8.19C2.52 5.0526 5.0526 2.52 8.19 2.52C11.3274 2.52 13.86 5.0526 13.86 8.19C13.86 11.3274 11.3274 13.86 8.19 13.86Z"
                         fill="#656565"
-                      />
-                    </svg>
-                  </span>
-                </form>
+                      /></svg
+                  ></span>
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search for a product or brand"
+                    aria-label="Search"
+                  />
+                </div>
               </div>
             </div>
 
@@ -564,7 +583,7 @@
             </div>
           </div>
           <div class="d-flex gap-2" style="margin-top: 5.5rem">
-            <!-- Button -->
+            <!--  -->
             <button
               type="button"
               class="btn w-50"
@@ -583,7 +602,6 @@
         </div>
       </div>
     </main>
-
     <!-- Footer -->
     <footer>
       <img src="./images/logo.png" alt="logo" />
