@@ -312,6 +312,9 @@ footer {
 /* MEDIA QUERY */
 /*SMALL SCREEN / MOBILE*/
 @media (max-width: 576px) {
+  main {
+    margin-top: 7rem;
+  }
   .account-span {
     display: none;
   }
@@ -339,9 +342,6 @@ footer {
 
 /* LARGE SCREEN */
 @media (min-width: 768px) {
-  main {
-    margin-top: 9rem;
-  }
   .search-icon {
     display: none;
   }
