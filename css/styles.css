@@ -92,9 +92,10 @@ svg {
 .nav-search-input-div {
   width: 90%;
   margin: auto;
-  padding: 0.1rem;
+  padding: 0.3rem;
   border-radius: 30px;
   border: 1px solid black;
+  background-color: #fff;
 }
 .nav-search-input-div svg {
   position: relative;
@@ -109,6 +110,7 @@ svg {
   width: 90%;
   position: relative;
   left: 0.3rem;
+  background-color: #fff;
 }
 
 .nav-search-input-div input:focus {
