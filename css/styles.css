@@ -81,8 +81,6 @@ svg {
 
 .right-icons {
   display: flex;
-  align-content: center;
-  justify-items: center;
   padding: 1rem;
   gap: 12px;
 }
@@ -133,6 +131,7 @@ main {
   flex-direction: column;
   overflow-x: hidden;
   margin-top: 3.5rem;
+  overflow-y: hidden;
 }
 .main-paragraph {
   padding-right: 1rem;
@@ -182,6 +181,11 @@ main {
   position: relative;
   top: -1.6rem;
   left: -7.2rem;
+}
+
+.dropdown-menu {
+  height: 200px;
+  overflow: scroll;
 }
 
 .dropdown-menu li {
